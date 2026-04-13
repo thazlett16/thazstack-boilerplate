@@ -1,0 +1,24 @@
+{
+  "name": "@thazstack/ui",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "check": "vp check",
+    "ui": "vpx shadcn@latest",
+    "test": "vp test"
+  },
+  "dependencies": {
+    "react-aria-components": "catalog:"
+  },
+  "devDependencies": {
+    "@thazstack/typescript-config": "workspace:*",
+    "@types/node": "catalog:",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:",
+    "vite-plus": "catalog:"
+  }
+}

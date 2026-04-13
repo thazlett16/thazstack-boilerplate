@@ -3,12 +3,14 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "ready": "vp fmt && vp lint",
     "check": "vp check",
     "check:fix": "vp check --fix",
+    "intent": "vpx @tanstack/intent@latest",
+    "prepare": "vp config",
+    "ready": "vp fmt && vp lint",
+    "skills": "vpx skills@latest",
     "taze": "vpx taze@latest -Ilwr",
-    "taze:major": "vpx taze@latest major -Ilwr",
-    "prepare": "vp config"
+    "taze:major": "vpx taze@latest major -Ilwr"
   },
   "devDependencies": {
     "@tanstack/eslint-plugin-query": "catalog:",
