@@ -1,0 +1,22 @@
+{
+  "name": "thazstack-boilerplate",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "ready": "vp fmt && vp lint && vp run -r test && vp run -r build",
+    "prepare": "vp config"
+  },
+  "devDependencies": {
+    "@tanstack/eslint-plugin-query": "catalog:",
+    "@tanstack/eslint-plugin-router": "catalog:",
+    "eslint-plugin-react-hooks-extra": "catalog:",
+    "eslint-plugin-react-naming-convention": "catalog:",
+    "eslint-plugin-react-web-api": "catalog:",
+    "oxlint": "catalog:",
+    "vite-plus": "catalog:"
+  },
+  "engines": {
+    "node": ">=24.13.0"
+  },
+  "packageManager": "pnpm@10.33.0"
+}
