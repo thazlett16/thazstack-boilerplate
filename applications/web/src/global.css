@@ -1,6 +1,10 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @import '@fontsource-variable/inter';
+/*---break---*/
+@plugin "tailwindcss-react-aria-components";
+@plugin "tailwindcss-animate";
+/*---break---*/
 
 @custom-variant dark (&:is(.dark *));
 
