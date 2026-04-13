@@ -3,7 +3,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "ready": "vp fmt && vp lint && vp run -r test && vp run -r build",
+    "ready": "vp fmt && vp lint",
+    "check": "vp check",
+    "check:fix": "vp check --fix",
+    "taze": "vpx taze@latest -Ilwr",
+    "taze:major": "vpx taze@latest major -Ilwr",
     "prepare": "vp config"
   },
   "devDependencies": {
