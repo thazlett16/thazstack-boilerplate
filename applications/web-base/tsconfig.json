@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "@thazstack/typescript-config/dom",
+    "@thazstack/typescript-config/bundler",
+    "@thazstack/typescript-config/react"
+  ],
+  "compilerOptions": {
+    "types": ["node", "vite/client"],
+    "paths": {
+      "#src/*": ["./src/*"],
+      "#test/*": ["./test/*"]
+    }
+  },
+  "include": ["src", "test"],
+  "exclude": ["node_modules"]
+}
