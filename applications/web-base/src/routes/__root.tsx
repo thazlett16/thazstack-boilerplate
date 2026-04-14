@@ -1,4 +1,4 @@
-import { Outlet, createRootRouteWithContext } from '@tanstack/react-router';
+import { Outlet, createRootRouteWithContext, HeadContent } from '@tanstack/react-router';
 
 import type { TanStackRouterContext } from '#src/configs/tanstack-router';
 
@@ -17,6 +17,9 @@ export const Route = createRootRouteWithContext<TanStackRouterContext>()({
           name: 'viewport',
           content: 'width=device-width, initial-scale=1',
         },
+        {
+          title: 'Test Application',
+        },
       ],
       links: [
         {
@@ -32,6 +35,7 @@ export const Route = createRootRouteWithContext<TanStackRouterContext>()({
 function RootComponent() {
   return (
     <>
+      <HeadContent />
       <div>/__root</div>
       <Outlet />
       <Devtools />

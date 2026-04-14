@@ -4,11 +4,12 @@ import tanStackRouterPluginVite from '@tanstack/router-plugin/vite';
 import viteJSPluginReact from '@vitejs/plugin-react';
 import { defineConfig } from 'vite-plus';
 import viteTSConfigPaths from 'vite-tsconfig-paths';
+
 export default defineConfig({
   // resolve: {
   //   tsconfigPaths: true,
   // },
-  base: '/web-base-ui',
+  base: '/web-ui',
   plugins: [
     devtools(),
     // Eventually won't need this anymore. Doesn't work in dev though. Eventually should use `outputOptions.preserveModules`

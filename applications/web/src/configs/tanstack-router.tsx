@@ -15,7 +15,7 @@ export function createRouter() {
 
   return tanStackCreateRouter({
     routeTree,
-    basepath: '/web-base-ui',
+    basepath: '/web-ui',
     routeMasks: [],
     search: {
       strict: true,
