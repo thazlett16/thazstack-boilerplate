@@ -8,7 +8,7 @@ export default defineConfig({
   // resolve: {
   //   tsconfigPaths: true,
   // },
-  base: '/web-ui',
+  base: '/web-base-ui',
   plugins: [
     devtools(),
     // Eventually won't need this anymore. Doesn't work in dev though. Eventually should use `outputOptions.preserveModules`
