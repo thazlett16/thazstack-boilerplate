@@ -2,7 +2,7 @@ import { Outlet, createRootRouteWithContext, HeadContent } from '@tanstack/react
 
 import type { TanStackRouterContext } from '#src/configs/tanstack-router';
 
-import { Devtools } from '#src/components/devtools';
+import { Devtools } from '#src/common/components/devtools';
 
 import appCss from '#src/global.css?url';
 

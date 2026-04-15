@@ -1,7 +1,9 @@
 import { createFileRoute } from '@tanstack/react-router';
 
-import { Select, SelectItem } from '#src/components/ui/select';
-import { TextField } from '#src/components/ui/text-field';
+import { NumberField } from '#src/common/components/ui/number-field';
+// import { TextField } from '#src/common/components/ui/text-field';
+import { Card } from '#src/common/components/card';
+import { TextField } from '#src/common/components/ui/text-field';
 
 export const Route = createFileRoute('/home')({
   component: RouteComponent,
@@ -10,18 +12,14 @@ export const Route = createFileRoute('/home')({
 function RouteComponent() {
   return (
     <>
-      <TextField
-        label={'test label'}
-        placeholder={'test place'}
-      />
-      <Select label="Favorite animal">
-        <SelectItem>Aardvark</SelectItem>
-        <SelectItem>Cat</SelectItem>
-        <SelectItem>Dog</SelectItem>
-        <SelectItem>Kangaroo</SelectItem>
-        <SelectItem>Panda</SelectItem>
-        <SelectItem>Snake</SelectItem>
-      </Select>
+      TEST HOME
+      <TextField label={'Test Text Field'} />
+      <NumberField label={'Test Number Field'} />
+      <Card.Root>
+        <Card.Header>asdf</Card.Header>
+        <Card.Content>asdf</Card.Content>
+        <Card.Footer>adsf</Card.Footer>
+      </Card.Root>
     </>
   );
 }
