@@ -2,10 +2,10 @@ import type { VariantProps } from 'tailwind-variants';
 
 import { tv } from 'tailwind-variants';
 
+import { surfaceVariants } from '#src/common/components/surface';
+
 export const cardVariants = tv({
-  defaultVariants: {
-    variant: 'default',
-  },
+  extend: surfaceVariants,
   slots: {
     root: 'group/card flex flex-col overflow-hidden rounded-xl',
     header: 'group/card-header flex flex-col gap-0.5 px-4 pt-4 pb-2',
@@ -20,13 +20,13 @@ export const cardVariants = tv({
         root: '',
       },
       default: {
-        root: 'border border-border bg-surface-default text-surface-foreground-default shadow-xs',
+        root: 'border border-border',
       },
       secondary: {
-        root: 'border border-border bg-surface-secondary text-surface-foreground-secondary shadow-xs',
+        root: 'border border-border',
       },
       tertiary: {
-        root: 'border border-border bg-surface-tertiary text-surface-foreground-tertiary',
+        root: 'border border-border',
       },
     },
   },

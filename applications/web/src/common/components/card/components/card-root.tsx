@@ -2,6 +2,7 @@ import type { ComponentPropsWithRef, ReactNode } from 'react';
 
 import type { CardVariants } from '#src/common/components/card/variants';
 
+import { Surface } from '#src/common/components/surface';
 import { useCardContext } from '#src/common/components/card/context';
 
 import { CardContextProvider } from './card-context-provider';
@@ -18,7 +19,7 @@ export function CardRoot(props: CardRootProps) {
   );
 }
 
-function CardRootInner(props: ComponentPropsWithRef<'div'>) {
+function CardRootInner(props: CardRootProps) {
   const context = useCardContext();
 
   if (context === undefined) {
@@ -26,10 +27,22 @@ function CardRootInner(props: ComponentPropsWithRef<'div'>) {
   }
 
   const { slots } = context;
+  const { variant } = props;
+
+  if (variant === 'transparent') {
+    return (
+      <div
+        {...props}
+        className={slots.root({ className: props.className })}
+        data-slot="card"
+      />
+    );
+  }
 
   return (
-    <div
+    <Surface
       {...props}
+      variant={variant}
       className={slots.root({ className: props.className })}
       data-slot="card"
     />
