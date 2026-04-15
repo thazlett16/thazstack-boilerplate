@@ -28,9 +28,9 @@ const SWATCHES: SwatchDef[] = [
 
   { label: 'Muted', bg: '--muted', fg: '--muted-foreground', hoverBg: '--muted-hover', hasInv: false },
   { label: 'Background', bg: '--background', fg: '--foreground', hoverBg: null, hasInv: false },
-  { label: 'Overlay', bg: '--surface-default', fg: '--surface-foreground-default', hoverBg: null, hasInv: false },
-  { label: 'Overlay 2', bg: '--surface-secondary', fg: '--surface-foreground-secondary', hoverBg: null, hasInv: false },
-  { label: 'Overlay 3', bg: '--surface-tertiary', fg: '--surface-foreground-tertiary', hoverBg: null, hasInv: false },
+  { label: 'Overlay', bg: '--surface-default', fg: '--surface-default-foreground', hoverBg: null, hasInv: false },
+  { label: 'Overlay 2', bg: '--surface-secondary', fg: '--surface-secondary-foreground', hoverBg: null, hasInv: false },
+  { label: 'Overlay 3', bg: '--surface-tertiary', fg: '--surface-tertiary-foreground', hoverBg: null, hasInv: false },
 ];
 
 // ---------------------------------------------------------------------------

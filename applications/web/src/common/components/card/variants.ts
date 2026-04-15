@@ -16,9 +16,7 @@ export const cardVariants = tv({
   },
   variants: {
     variant: {
-      transparent: {
-        root: '',
-      },
+      transparent: {},
       default: {
         root: 'border border-border',
       },

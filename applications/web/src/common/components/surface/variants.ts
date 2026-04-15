@@ -12,13 +12,13 @@ export const surfaceVariants = tv({
   variants: {
     variant: {
       default: {
-        root: 'bg-surface-default text-surface-foreground-default',
+        root: 'bg-surface-default text-surface-default-foreground',
       },
       secondary: {
-        root: 'bg-surface-secondary text-surface-foreground-secondary',
+        root: 'bg-surface-secondary text-surface-secondary-foreground',
       },
       tertiary: {
-        root: 'bg-surface-tertiary text-surface-foreground-tertiary',
+        root: 'bg-surface-tertiary text-surface-tertiary-foreground',
       },
     },
   },

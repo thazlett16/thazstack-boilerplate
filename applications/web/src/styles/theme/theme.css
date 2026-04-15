@@ -8,13 +8,13 @@
   --color-foreground: var(--foreground);
 
   --color-surface-default: var(--surface-default);
-  --color-surface-foreground-default: var(--surface-foreground-default);
+  --color-surface-default-foreground: var(--surface-default-foreground);
 
   --color-surface-secondary: var(--surface-secondary);
-  --color-surface-foreground-secondary: var(--surface-foreground-secondary);
+  --color-surface-secondary-foreground: var(--surface-secondary-foreground);
 
   --color-surface-tertiary: var(--surface-tertiary);
-  --color-surface-foreground-tertiary: var(--surface-foreground-tertiary);
+  --color-surface-tertiary-foreground: var(--surface-tertiary-foreground);
 
   --color-success: var(--success);
   --color-success-foreground: var(--success-foreground);

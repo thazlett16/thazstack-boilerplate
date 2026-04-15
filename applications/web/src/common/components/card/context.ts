@@ -1,8 +1,9 @@
 import { createContext, use } from 'react';
 
-import type { cardVariants } from '#src/common/components/card/variants';
+import type { cardVariants, CardVariants } from '#src/common/components/card/variants';
 
 export interface CardContextType {
+  variant: CardVariants['variant'];
   slots: ReturnType<typeof cardVariants>;
 }
 

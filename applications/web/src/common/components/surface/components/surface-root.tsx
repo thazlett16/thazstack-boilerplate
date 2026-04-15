@@ -4,21 +4,21 @@ import type { SurfaceVariants } from '#src/common/components/surface/variants';
 
 import { useSurfaceContext } from '#src/common/components/surface/context';
 
-import { SurfaceContextProvider } from './surface-context';
+import { SurfaceContextProvider } from './surface-context-provider';
 
 export interface SurfaceRootProps extends ComponentPropsWithRef<'div'>, SurfaceVariants {
   children: ReactNode;
 }
 
-export function SurfaceRoot({ variant, ...props }: SurfaceRootProps) {
+export function SurfaceRoot(props: SurfaceRootProps) {
   return (
-    <SurfaceContextProvider variant={variant}>
+    <SurfaceContextProvider variant={props.variant}>
       <SurfaceRootInner {...props} />
     </SurfaceContextProvider>
   );
 }
 
-function SurfaceRootInner(props: ComponentPropsWithRef<'div'>) {
+function SurfaceRootInner(props: SurfaceRootProps) {
   const context = useSurfaceContext();
 
   if (context === undefined) {

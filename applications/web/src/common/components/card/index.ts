@@ -1,11 +1,5 @@
-import type { CardContentProps } from './components/card-content';
-import type { CardDescriptionProps } from './components/card-description';
-import type { CardFooterProps } from './components/card-footer';
-import type { CardHeaderProps } from './components/card-header';
-import type { CardRootProps } from './components/card-root';
-import type { CardTitleProps } from './components/card-title';
-
 import { CardContent } from './components/card-content';
+import { CardContextProvider } from './components/card-context-provider';
 import { CardDescription } from './components/card-description';
 import { CardFooter } from './components/card-footer';
 import { CardHeader } from './components/card-header';
@@ -14,6 +8,7 @@ import { CardTitle } from './components/card-title';
 
 export const Card = Object.assign(CardRoot, {
   Root: CardRoot,
+  Provider: CardContextProvider,
   Header: CardHeader,
   Title: CardTitle,
   Description: CardDescription,
@@ -21,9 +16,13 @@ export const Card = Object.assign(CardRoot, {
   Footer: CardFooter,
 });
 
-// DO I want to expose in this way? Probably not but we shall see
-// export { CardRoot, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
-export type { CardRootProps, CardHeaderProps, CardTitleProps, CardDescriptionProps, CardContentProps, CardFooterProps };
+export type { CardContextProviderProps } from './components/card-context-provider';
+export type { CardContentProps } from './components/card-content';
+export type { CardDescriptionProps } from './components/card-description';
+export type { CardFooterProps } from './components/card-footer';
+export type { CardHeaderProps } from './components/card-header';
+export type { CardRootProps } from './components/card-root';
+export type { CardTitleProps } from './components/card-title';
 
 export { useCardContext } from './context';
 
