@@ -10,7 +10,7 @@ export const cardVariants = tv({
     root: 'group/card flex flex-col overflow-hidden rounded-xl',
     header: 'group/card-header flex flex-col gap-0.5 px-4 pt-4 pb-2',
     title: 'group/card-title text-sm font-semibold leading-none tracking-tight',
-    description: 'group/card-description text-xs leading-snug text-muted-foreground',
+    description: 'group/card-description text-xs leading-snug opacity-60',
     content: 'group/card-content px-4 pb-4',
     footer: 'group/card-footer flex items-center gap-2 px-4 pb-4',
   },
@@ -20,14 +20,13 @@ export const cardVariants = tv({
         root: '',
       },
       default: {
-        root: 'border border-border bg-card text-card-foreground shadow-xs',
+        root: 'border border-border bg-surface-default text-surface-foreground-default shadow-xs',
       },
       secondary: {
-        root: 'border border-transparent bg-secondary text-secondary-foreground shadow-xs',
-        description: 'text-secondary-foreground/60',
+        root: 'border border-border bg-surface-secondary text-surface-foreground-secondary shadow-xs',
       },
       tertiary: {
-        root: 'border border-transparent bg-muted text-foreground',
+        root: 'border border-border bg-surface-tertiary text-surface-foreground-tertiary',
       },
     },
   },

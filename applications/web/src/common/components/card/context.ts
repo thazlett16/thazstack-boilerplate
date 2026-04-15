@@ -8,12 +8,6 @@ export interface CardContextType {
 
 export const CardContext = createContext<CardContextType | undefined>(undefined);
 
-export const useCardContext = () => {
-  const context = use(CardContext);
-
-  if (context === undefined) {
-    throw new Error('useCardContext must be used within a Card');
-  }
-
-  return context;
-};
+export function useCardContext() {
+  return use(CardContext);
+}

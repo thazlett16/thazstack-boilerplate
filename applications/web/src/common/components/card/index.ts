@@ -25,5 +25,7 @@ export const Card = Object.assign(CardRoot, {
 // export { CardRoot, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
 export type { CardRootProps, CardHeaderProps, CardTitleProps, CardDescriptionProps, CardContentProps, CardFooterProps };
 
+export { useCardContext } from './context';
+
 export type { CardVariants } from './variants';
 export { cardVariants } from './variants';

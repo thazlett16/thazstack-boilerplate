@@ -7,7 +7,13 @@ export interface CardFooterProps extends ComponentPropsWithRef<'div'> {
 }
 
 export function CardFooter(props: CardFooterProps) {
-  const { slots } = useCardContext();
+  const context = useCardContext();
+
+  if (context === undefined) {
+    throw new Error('CardFooter must be used within a Card or a component that extends a CardContextProvider');
+  }
+
+  const { slots } = context;
 
   return (
     <div

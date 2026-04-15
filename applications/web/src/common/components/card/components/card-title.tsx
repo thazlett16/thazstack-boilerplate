@@ -7,7 +7,13 @@ export interface CardTitleProps extends ComponentPropsWithRef<'h3'> {
 }
 
 export function CardTitle(props: CardTitleProps) {
-  const { slots } = useCardContext();
+  const context = useCardContext();
+
+  if (context === undefined) {
+    throw new Error('CardTitle must be used within a Card or a component that extends a CardContextProvider');
+  }
+
+  const { slots } = context;
 
   return (
     <div

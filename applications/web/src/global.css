@@ -5,11 +5,11 @@
 
 @import './styles/entry.css';
 
-/*@layer base {*/
-/*  body {*/
-/*    @apply bg-background text-foreground;*/
-/*  }*/
-/*  html {*/
-/*    @apply font-sans;*/
-/*  }*/
-/*}*/
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}

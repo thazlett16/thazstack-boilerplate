@@ -7,7 +7,13 @@ export interface CardDescriptionProps extends ComponentPropsWithRef<'p'> {
 }
 
 export function CardDescription(props: CardDescriptionProps) {
-  const { slots } = useCardContext();
+  const context = useCardContext();
+
+  if (context === undefined) {
+    throw new Error('CardDescription must be used within a Card or a component that extends a CardContextProvider');
+  }
+
+  const { slots } = context;
 
   return (
     <div

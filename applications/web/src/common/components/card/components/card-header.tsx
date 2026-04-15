@@ -7,7 +7,13 @@ export interface CardHeaderProps extends ComponentPropsWithRef<'div'> {
 }
 
 export function CardHeader(props: CardHeaderProps) {
-  const { slots } = useCardContext();
+  const context = useCardContext();
+
+  if (context === undefined) {
+    throw new Error('CardHeader must be used within a Card or a component that extends a CardContextProvider');
+  }
+
+  const { slots } = context;
 
   return (
     <div

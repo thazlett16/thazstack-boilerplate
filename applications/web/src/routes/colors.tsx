@@ -1,0 +1,141 @@
+import type { CSSProperties } from 'react';
+
+import { createFileRoute } from '@tanstack/react-router';
+
+export const Route = createFileRoute('/colors')({
+  component: RouteComponent,
+});
+
+// ---------------------------------------------------------------------------
+// Swatch data
+// ---------------------------------------------------------------------------
+
+interface SwatchDef {
+  label: string;
+  bg: string;
+  fg: string;
+  hoverBg: string | null;
+  /** Whether this color has an inv (tinted/transparent) variant */
+  hasInv: boolean;
+}
+
+const SWATCHES: SwatchDef[] = [
+  { label: 'Primary', bg: '--primary', fg: '--primary-foreground', hoverBg: '--primary-hover', hasInv: true },
+  { label: 'Secondary', bg: '--secondary', fg: '--secondary-foreground', hoverBg: '--secondary-hover', hasInv: true },
+  { label: 'Success', bg: '--success', fg: '--success-foreground', hoverBg: '--success-hover', hasInv: true },
+  { label: 'Warning', bg: '--warning', fg: '--warning-foreground', hoverBg: '--warning-hover', hasInv: true },
+  { label: 'Danger', bg: '--danger', fg: '--danger-foreground', hoverBg: '--danger-hover', hasInv: true },
+
+  { label: 'Muted', bg: '--muted', fg: '--muted-foreground', hoverBg: '--muted-hover', hasInv: false },
+  { label: 'Background', bg: '--background', fg: '--foreground', hoverBg: null, hasInv: false },
+  { label: 'Overlay', bg: '--surface-default', fg: '--surface-foreground-default', hoverBg: null, hasInv: false },
+  { label: 'Overlay 2', bg: '--surface-secondary', fg: '--surface-foreground-secondary', hoverBg: null, hasInv: false },
+  { label: 'Overlay 3', bg: '--surface-tertiary', fg: '--surface-foreground-tertiary', hoverBg: null, hasInv: false },
+];
+
+// ---------------------------------------------------------------------------
+// Components
+// ---------------------------------------------------------------------------
+
+interface SwatchCSSVars extends CSSProperties {
+  '--swatch-bg': string;
+  '--swatch-fg': string;
+  '--swatch-hover'?: string;
+}
+
+function ChipPair({
+  chipClass,
+  hoverChipClass,
+  hasHover,
+}: {
+  chipClass: string;
+  hoverChipClass: string;
+  hasHover: boolean;
+}) {
+  return (
+    <div className="flex items-center gap-1 shrink-0">
+      <div className={chipClass}>Aa</div>
+      {hasHover ? (
+        <>
+          <span className="text-[0.5rem] opacity-20 select-none">→</span>
+          <div className={hoverChipClass} />
+        </>
+      ) : (
+        <div className="w-8" />
+      )}
+    </div>
+  );
+}
+
+function SwatchRow({ label, bg, fg, hoverBg, hasInv }: SwatchDef) {
+  const cssVars: SwatchCSSVars = {
+    '--swatch-bg': `var(${bg})`,
+    '--swatch-fg': `var(${fg})`,
+    ...(hoverBg ? { '--swatch-hover': `var(${hoverBg})` } : {}),
+  };
+
+  return (
+    <div
+      style={cssVars}
+      className="flex items-start gap-2.5"
+    >
+      <div className="flex flex-col gap-1 shrink-0">
+        <ChipPair
+          chipClass={`size-9 rounded border border-black/10 flex items-center justify-center text-[0.6rem] font-bold select-none transition-colors duration-150 bg-(--swatch-bg) text-(color:--swatch-fg)${hoverBg ? ' hover:bg-(--swatch-hover) cursor-pointer' : ''}`}
+          hoverChipClass="size-5 rounded-sm bg-(--swatch-hover) border border-black/10"
+          hasHover={hoverBg !== null}
+        />
+        {hasInv && (
+          <ChipPair
+            chipClass="size-9 rounded border border-black/10 flex items-center justify-center text-[0.6rem] font-bold select-none transition-colors duration-150 cursor-pointer bg-[color-mix(in_oklab,var(--swatch-bg)_15%,transparent)] text-(color:--swatch-bg) hover:bg-[color-mix(in_oklab,var(--swatch-bg)_20%,transparent)]"
+            hoverChipClass="size-5 rounded-sm border border-black/10 bg-[color-mix(in_oklab,var(--swatch-bg)_20%,transparent)]"
+            hasHover
+          />
+        )}
+      </div>
+
+      <div className="min-w-0 pt-1.5">
+        <p className="text-[0.72rem] font-medium leading-none">{label}</p>
+        <p className="mt-0.5 text-[0.6rem] opacity-35 font-mono leading-none">{`var(${bg})`}</p>
+      </div>
+    </div>
+  );
+}
+
+function ThemeSwatches({ theme }: { theme: 'light' | 'dark' }) {
+  return (
+    <div className={`${theme} flex-1 min-w-60 rounded-xl p-5 border border-black/10 bg-background text-foreground`}>
+      <p className="mb-3.5 text-[0.65rem] font-bold uppercase tracking-widest opacity-35">{theme} mode</p>
+      <div className="flex flex-col gap-2">
+        {SWATCHES.map((s) => (
+          <SwatchRow
+            key={s.label}
+            {...s}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Route
+// ---------------------------------------------------------------------------
+
+function RouteComponent() {
+  return (
+    <div className="flex flex-col gap-8 p-8">
+      <div>
+        <h1 className="text-lg font-semibold leading-none">Colors</h1>
+        <p className="mt-1 text-sm text-muted-foreground">
+          Semantic color tokens — base, hover, and inv (tinted) variants.
+        </p>
+      </div>
+
+      <div className="flex gap-4 flex-wrap">
+        <ThemeSwatches theme="light" />
+        <ThemeSwatches theme="dark" />
+      </div>
+    </div>
+  );
+}

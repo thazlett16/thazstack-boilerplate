@@ -7,14 +7,14 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  --color-overlay-default: var(--overlay-default);
-  --color-overlay-foreground-default: var(--overlay-foreground-default);
+  --color-surface-default: var(--surface-default);
+  --color-surface-foreground-default: var(--surface-foreground-default);
 
-  --color-overlay-secondary: var(--overlay-secondary);
-  --color-overlay-foreground-secondary: var(--overlay-foreground-secondary);
+  --color-surface-secondary: var(--surface-secondary);
+  --color-surface-foreground-secondary: var(--surface-foreground-secondary);
 
-  --color-overlay-tertiary: var(--overlay-tertiary);
-  --color-overlay-foreground-tertiary: var(--overlay-foreground-tertiary);
+  --color-surface-tertiary: var(--surface-tertiary);
+  --color-surface-foreground-tertiary: var(--surface-foreground-tertiary);
 
   --color-success: var(--success);
   --color-success-foreground: var(--success-foreground);
@@ -36,4 +36,22 @@
   --color-danger-inv: color-mix(in oklab, var(--danger) 15%, transparent);
   --color-danger-inv-foreground: var(--danger);
   --color-danger-inv-hover: color-mix(in oklab, var(--danger) 20%, transparent);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-inv: color-mix(in oklab, var(--primary) 15%, transparent);
+  --color-primary-inv-foreground: var(--primary);
+  --color-primary-inv-hover: color-mix(in oklab, var(--primary) 20%, transparent);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-secondary-inv: color-mix(in oklab, var(--secondary) 15%, transparent);
+  --color-secondary-inv-foreground: var(--secondary);
+  --color-secondary-inv-hover: color-mix(in oklab, var(--secondary) 20%, transparent);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted-hover: var(--muted-hover);
 }

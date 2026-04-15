@@ -1,8 +1,8 @@
 /* Remove certain default tailwind namespaces */
-@import "./reset.css";
+@import './reset.css';
 
 /* Import the default theme entry point */
-@import "./theme.css";
+@import './theme.css';
 
 /* Import the default theme variables */
-@import "./variables.css";
+@import './variables.css';
