@@ -1,0 +1,95 @@
+:root {
+  /* Border Radius */
+  --radius: 0.125rem;
+  --field-radius: 0.125rem;
+
+  /* Font Family */
+  /* Make sure to load Inter font in your app */
+  /*--font-sans: var(--font-inter);*/
+
+  /* Static Colors */
+  --white: oklch(100% 0 0);
+  --black: oklch(0% 0 0);
+}
+
+.light,
+[data-theme="light"] {
+  color-scheme: light;
+
+  --background: oklch();
+  --foreground: oklch();
+
+  --overlay-default: oklch();
+  --overlay-foreground-default: oklch();
+
+  --overlay-secondary: oklch();
+  --overlay-foreground-secondary: oklch();
+
+  --overlay-tertiary: oklch();
+  --overlay-foreground-tertiary: oklch();
+
+  --success: oklch();
+  --success-foreground: oklch();
+  --success-hover: oklch();
+
+  --warning: oklch();
+  --warning-foreground: oklch();
+  --warning-hover: oklch();
+
+  --danger: oklch();
+  --danger-foreground: oklch();
+  --danger-hover: oklch();
+
+  --primary: oklch();
+  --primary-foreground: oklch();
+  --primary-hover: oklch();
+
+  --secondary: oklch();
+  --secondary-foreground: oklch();
+  --secondary-hover: oklch();
+
+  --ghost: oklch();
+  --ghost-foreground: oklch();
+  --ghost-hover: oklch();
+}
+
+.dark,
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --background: oklch();
+  --foreground: oklch();
+
+  --overlay-default: oklch();
+  --overlay-foreground-default: oklch();
+
+  --overlay-secondary: oklch();
+  --overlay-foreground-secondary: oklch();
+
+  --overlay-tertiary: oklch();
+  --overlay-foreground-tertiary: oklch();
+
+  --success: oklch();
+  --success-foreground: oklch();
+  --success-hover: oklch();
+
+  --warning: oklch();
+  --warning-foreground: oklch();
+  --warning-hover: oklch();
+
+  --danger: oklch();
+  --danger-foreground: oklch();
+  --danger-hover: oklch();
+
+  --primary: oklch();
+  --primary-foreground: oklch();
+  --primary-hover: oklch();
+
+  --secondary: oklch();
+  --secondary-foreground: oklch();
+  --secondary-hover: oklch();
+
+  --muted: oklch();
+  --muted-foreground: oklch();
+  --muted-hover: oklch();
+}

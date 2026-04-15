@@ -1,0 +1,39 @@
+@theme inline {
+  /* Static Colors that don't change with theme */
+  --color-white: var(--white);
+  --color-black: var(--black);
+
+  /* App colors that change with theme */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-overlay-default: var(--overlay-default);
+  --color-overlay-foreground-default: var(--overlay-foreground-default);
+
+  --color-overlay-secondary: var(--overlay-secondary);
+  --color-overlay-foreground-secondary: var(--overlay-foreground-secondary);
+
+  --color-overlay-tertiary: var(--overlay-tertiary);
+  --color-overlay-foreground-tertiary: var(--overlay-foreground-tertiary);
+
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-success-hover: var(--success-hover);
+  --color-success-inv: color-mix(in oklab, var(--success) 15%, transparent);
+  --color-success-inv-foreground: var(--success);
+  --color-success-inv-hover: color-mix(in oklab, var(--success) 20%, transparent);
+
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-warning-hover: var(--warning-hover);
+  --color-warning-inv: color-mix(in oklab, var(--warning) 15%, transparent);
+  --color-warning-inv-foreground: var(--warning);
+  --color-warning-inv-hover: color-mix(in oklab, var(--warning) 20%, transparent);
+
+  --color-danger: var(--danger);
+  --color-danger-foreground: var(--danger-foreground);
+  --color-danger-hover: var(--danger-hover);
+  --color-danger-inv: color-mix(in oklab, var(--danger) 15%, transparent);
+  --color-danger-inv-foreground: var(--danger);
+  --color-danger-inv-hover: color-mix(in oklab, var(--danger) 20%, transparent);
+}
