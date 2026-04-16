@@ -29,9 +29,7 @@ function CardRootWrapper(props: CardRootProps) {
   const { variant } = context;
 
   if (variant === 'transparent') {
-    return (
-      <CardRootInner {...props} />
-    );
+    return <CardRootInner {...props} />;
   }
 
   return (

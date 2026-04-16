@@ -29,6 +29,9 @@ export const Route = createRootRouteWithContext<TanStackRouterContext>()({
 const NAV_LINKS = [
   { to: '/home', label: 'Home' },
   { to: '/colors', label: 'Colors' },
+  { to: '/buttons', label: 'Buttons' },
+  { to: '/cards', label: 'Cards' },
+  { to: '/surfaces', label: 'Surfaces' },
   { to: '/about', label: 'About' },
 ] as const;
 
