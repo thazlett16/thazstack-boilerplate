@@ -38,9 +38,9 @@ function ButtonRootInner(props: ButtonRootProps) {
   return (
     <RACButton
       {...props}
-      className={composeRenderProps(props.className, (className, renderProps) =>
-        slots.root({ ...renderProps, className }),
-      )}
+      className={composeRenderProps(props.className, (className, renderProps) => {
+        return slots.root({ ...renderProps, className });
+      })}
     />
   );
 }
