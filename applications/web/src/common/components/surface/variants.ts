@@ -4,7 +4,7 @@ import type { SetNonNullable } from 'type-fest';
 
 export const surfaceVariants = tv({
   slots: {
-    root: 'group/surface',
+    root: ['group/surface'],
   },
   defaultVariants: {
     variant: 'default',

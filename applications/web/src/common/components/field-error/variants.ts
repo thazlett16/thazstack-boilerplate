@@ -2,7 +2,7 @@ import { tv } from 'tailwind-variants';
 
 export const fieldErrorVariants = tv({
   slots: {
-    root: ['text-xs text-danger'],
+    root: ['group/field-error', 'text-xs text-danger'],
   },
 });
 

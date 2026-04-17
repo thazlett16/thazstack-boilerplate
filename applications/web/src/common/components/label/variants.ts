@@ -4,6 +4,7 @@ import { tv } from 'tailwind-variants';
 export const labelVariants = tv({
   slots: {
     root: [
+      'group/label',
       'text-sm font-medium text-foreground',
       // 'data-disabled:',
       // 'data-invalid:',

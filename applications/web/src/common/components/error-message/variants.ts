@@ -3,7 +3,7 @@ import { tv } from 'tailwind-variants';
 
 export const errorMessageVariants = tv({
   slots: {
-    root: 'text-xs text-danger',
+    root: ['group/error-message', 'text-xs text-danger'],
   },
 });
 
