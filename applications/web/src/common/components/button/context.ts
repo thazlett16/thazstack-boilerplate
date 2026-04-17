@@ -1,12 +1,9 @@
 import { createContext, use } from 'react';
 
-import type { buttonVariants, ButtonVariants } from '#src/common/components/button/variants';
+import type { buttonVariants, ButtonVariants } from './variants';
 
-export interface ButtonContextType {
-  variant: ButtonVariants['variant'];
-  size: ButtonVariants['size'];
-  isInverted: ButtonVariants['isInverted'];
-  slots: ReturnType<typeof buttonVariants>;
+export interface ButtonContextType extends NonNullable<ButtonVariants> {
+  variants: ReturnType<typeof buttonVariants>;
 }
 
 export const ButtonContext = createContext<ButtonContextType | undefined>(undefined);

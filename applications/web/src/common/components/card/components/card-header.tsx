@@ -1,6 +1,6 @@
 import type { ComponentPropsWithRef, ReactNode } from 'react';
 
-import { useCardContext } from '#src/common/components/card/context';
+import { useCardContext } from '../context';
 
 export interface CardHeaderProps extends ComponentPropsWithRef<'div'> {
   children: ReactNode;
@@ -13,12 +13,12 @@ export function CardHeader(props: CardHeaderProps) {
     throw new Error('CardHeader must be used within a Card or a component that extends a CardContextProvider');
   }
 
-  const { slots } = context;
+  const { variants } = context;
 
   return (
     <div
       {...props}
-      className={slots.header({
+      className={variants.header({
         className: props.className,
       })}
       data-slot="card-header"

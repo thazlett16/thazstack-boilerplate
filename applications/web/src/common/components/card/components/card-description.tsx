@@ -1,6 +1,6 @@
 import type { ComponentPropsWithRef, ReactNode } from 'react';
 
-import { useCardContext } from '#src/common/components/card/context';
+import { useCardContext } from '../context';
 
 export interface CardDescriptionProps extends ComponentPropsWithRef<'p'> {
   children: ReactNode;
@@ -13,12 +13,12 @@ export function CardDescription(props: CardDescriptionProps) {
     throw new Error('CardDescription must be used within a Card or a component that extends a CardContextProvider');
   }
 
-  const { slots } = context;
+  const { variants } = context;
 
   return (
     <div
       {...props}
-      className={slots.description({
+      className={variants.description({
         className: props.className,
       })}
       data-slot="card-description"

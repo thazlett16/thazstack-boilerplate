@@ -9,10 +9,19 @@ export const buttonVariants = tv({
       'relative inline-flex items-center justify-center gap-2',
       'font-medium select-none cursor-default transition-colors outline-none',
       '[-webkit-tap-highlight-color:transparent]',
+      // 'data-hovered:',
+      // 'data-pressed:',
+      // 'data-focused:',
       'data-focus-visible:ring-2 data-focus-visible:ring-offset-2',
       'data-disabled:opacity-50 data-disabled:pointer-events-none',
       'data-pending:cursor-wait',
     ],
+  },
+  defaultVariants: {
+    variant: 'primary',
+    size: 'md',
+    isInverted: false,
+    fullWidth: false,
   },
   variants: {
     variant: {
@@ -96,11 +105,12 @@ export const buttonVariants = tv({
       },
     },
     fullWidth: {
-      true: { root: 'w-full' },
+      true: {
+        root: 'w-full',
+      },
     },
-    isInverted: { true: { root: '' } },
+    isInverted: { true: {} },
   },
-  // Inverted: tinted background, semantic color as text
   compoundVariants: [
     {
       variant: 'primary',
@@ -158,12 +168,6 @@ export const buttonVariants = tv({
       },
     },
   ],
-  defaultVariants: {
-    variant: 'primary',
-    size: 'md',
-    isInverted: false,
-    fullWidth: false,
-  },
 });
 
 export type ButtonVariants = VariantProps<typeof buttonVariants>;

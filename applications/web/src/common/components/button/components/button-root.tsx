@@ -2,25 +2,16 @@ import type { ButtonProps as RACButtonProps } from 'react-aria-components';
 
 import { composeRenderProps, Button as RACButton } from 'react-aria-components';
 
-import type { ButtonVariants } from '#src/common/components/button/variants';
+import type { ButtonVariants } from '../variants';
 
-import { useButtonContext } from '#src/common/components/button/context';
-
+import { useButtonContext } from '../context';
 import { ButtonContextProvider } from './button-context-provider';
 
-export interface ButtonRootProps extends RACButtonProps {
-  variant?: ButtonVariants['variant'];
-  size?: ButtonVariants['size'];
-  isInverted?: ButtonVariants['isInverted'];
-}
+export type ButtonRootProps = RACButtonProps & ButtonVariants;
 
 export function ButtonRoot(props: ButtonRootProps) {
   return (
-    <ButtonContextProvider
-      variant={props.variant}
-      size={props.size}
-      isInverted={props.isInverted}
-    >
+    <ButtonContextProvider {...props}>
       <ButtonRootInner {...props} />
     </ButtonContextProvider>
   );
@@ -30,16 +21,16 @@ function ButtonRootInner(props: ButtonRootProps) {
   const context = useButtonContext();
 
   if (context === undefined) {
-    throw new Error('ButtonRoot must be used within a ButtonContextProvider');
+    throw new Error('ButtonRoot must be used within a component that extends a SurfaceContextProvider');
   }
 
-  const { slots } = context;
+  const { variants } = context;
 
   return (
     <RACButton
       {...props}
       className={composeRenderProps(props.className, (className, renderProps) => {
-        return slots.root({ ...renderProps, className });
+        return variants.root({ ...renderProps, className });
       })}
     />
   );

@@ -1,6 +1,6 @@
 import type { ComponentPropsWithRef, ReactNode } from 'react';
 
-import { useCardContext } from '#src/common/components/card/context';
+import { useCardContext } from '../context';
 
 export interface CardContentProps extends ComponentPropsWithRef<'div'> {
   children: ReactNode;
@@ -13,12 +13,12 @@ export function CardContent(props: CardContentProps) {
     throw new Error('CardContent must be used within a Card or a component that extends a CardContextProvider');
   }
 
-  const { slots } = context;
+  const { variants } = context;
 
   return (
     <div
       {...props}
-      className={slots.content({
+      className={variants.content({
         className: props.className,
       })}
       data-slot="card-content"

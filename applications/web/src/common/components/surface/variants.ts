@@ -3,11 +3,11 @@ import type { VariantProps } from 'tailwind-variants';
 import { tv } from 'tailwind-variants';
 
 export const surfaceVariants = tv({
-  defaultVariants: {
-    variant: 'default',
-  },
   slots: {
     root: 'group/surface',
+  },
+  defaultVariants: {
+    variant: 'default',
   },
   variants: {
     variant: {

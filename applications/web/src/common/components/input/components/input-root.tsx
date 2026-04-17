@@ -1,21 +1,20 @@
-import type { InputProps as RACInputProps, InputRenderProps } from 'react-aria-components';
+import type { InputProps as RACInputProps } from 'react-aria-components';
 
-import { Input as RACInput } from 'react-aria-components';
+import { composeRenderProps, Input as RACInput } from 'react-aria-components';
+
+import type { InputVariants } from '../variants';
 
 import { inputVariants } from '../variants';
 
-export type InputRootProps = RACInputProps;
+export type InputRootProps = RACInputProps & InputVariants;
 
-export function InputRoot({ className: _className, ...props }: InputRootProps) {
-  const { root } = inputVariants();
+export function InputRoot(props: InputRootProps) {
   return (
     <RACInput
       {...props}
-      className={(renderProps: InputRenderProps) => {
-        const resolvedClassName =
-          typeof _className === 'function' ? _className({ ...renderProps, defaultClassName: undefined }) : _className;
-        return root({ ...renderProps, className: resolvedClassName });
-      }}
+      className={composeRenderProps(props.className, (className, renderProps) => {
+        return inputVariants({ ...renderProps, className });
+      })}
     />
   );
 }

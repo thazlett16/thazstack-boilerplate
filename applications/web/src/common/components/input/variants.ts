@@ -1,19 +1,37 @@
+import type { VariantProps } from 'tailwind-variants';
+
 import { tv } from 'tailwind-variants';
 
 export const inputVariants = tv({
-  slots: {
-    root: [
-      'w-full h-9 px-3 text-sm rounded-lg',
-      'border border-foreground/15 bg-background text-foreground',
-      'outline-none transition-colors',
-      'data-hovered:border-foreground/30',
-      'data-focused:border-foreground/30',
-      'data-focus-visible:ring-2 data-focus-visible:ring-offset-0 data-focus-visible:ring-primary',
-      'data-disabled:opacity-50 data-disabled:cursor-not-allowed',
-      'data-invalid:border-danger',
-      'data-readonly:bg-muted data-readonly:cursor-default',
-    ],
+  base: [
+    // 'data-hovered:',
+    // 'data-focused:',
+    // 'data-focus-visible:',
+    // 'data-disabled:',
+    // 'data-invalid:',
+    // 'data-readonly:',
+    // 'data-required:',
+  ],
+  defaultVariants: {
+    isDisabled: false,
+    isInvalid: false,
+    isReadOnly: false,
+    isRequired: false,
+  },
+  variants: {
+    isDisabled: {
+      true: '',
+    },
+    isInvalid: {
+      true: '',
+    },
+    isReadOnly: {
+      true: '',
+    },
+    isRequired: {
+      true: '',
+    },
   },
 });
 
-export type InputVariants = ReturnType<typeof inputVariants>;
+export type InputVariants = VariantProps<typeof inputVariants>;

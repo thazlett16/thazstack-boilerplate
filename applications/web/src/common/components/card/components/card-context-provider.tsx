@@ -2,22 +2,23 @@ import type { ReactNode } from 'react';
 
 import { useMemo } from 'react';
 
-import type { CardContextType } from '#src/common/components/card/context';
-import type { CardVariants } from '#src/common/components/card/variants';
+import type { CardContextType } from '../context';
+import type { CardVariants } from '../variants';
 
-import { CardContext } from '#src/common/components/card/context';
-import { cardVariants } from '#src/common/components/card/variants';
+import { CardContext } from '../context';
+import { cardVariants } from '../variants';
 
-export interface CardContextProviderProps {
-  variant?: CardVariants['variant'];
+export interface CardContextProviderProps extends CardVariants {
   children: ReactNode;
 }
 
-export function CardContextProvider({ variant, children }: CardContextProviderProps) {
+export function CardContextProvider(props: CardContextProviderProps) {
+  const { variant, children } = props;
+
   const value = useMemo<CardContextType>(
     () => ({
       variant,
-      slots: cardVariants({ variant }),
+      variants: cardVariants({ variant }),
     }),
     [variant],
   );

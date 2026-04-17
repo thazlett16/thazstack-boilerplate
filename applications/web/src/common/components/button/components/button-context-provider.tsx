@@ -2,28 +2,25 @@ import type { ReactNode } from 'react';
 
 import { useMemo } from 'react';
 
-import type { ButtonContextType } from '#src/common/components/button/context';
-import type { ButtonVariants } from '#src/common/components/button/variants';
+import type { ButtonContextType } from '../context';
+import type { ButtonVariants } from '../variants';
 
-import { ButtonContext } from '#src/common/components/button/context';
-import { buttonVariants } from '#src/common/components/button/variants';
+import { ButtonContext } from '../context';
+import { buttonVariants } from '../variants';
 
-export interface ButtonContextProviderProps {
-  variant?: ButtonVariants['variant'];
-  size?: ButtonVariants['size'];
-  isInverted?: ButtonVariants['isInverted'];
+export interface ButtonContextProviderProps extends ButtonVariants {
   children: ReactNode;
 }
 
-export function ButtonContextProvider({ variant, size, isInverted, children }: ButtonContextProviderProps) {
+export function ButtonContextProvider(props: ButtonContextProviderProps) {
+  const { variant, children } = props;
+
   const value = useMemo<ButtonContextType>(
     () => ({
       variant,
-      size,
-      isInverted,
-      slots: buttonVariants({ variant, size, isInverted }),
+      variants: buttonVariants({ variant }),
     }),
-    [variant, size, isInverted],
+    [variant],
   );
 
   return <ButtonContext value={value}>{children}</ButtonContext>;
