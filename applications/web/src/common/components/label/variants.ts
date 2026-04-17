@@ -2,13 +2,15 @@ import type { VariantProps } from 'tailwind-variants';
 import { tv } from 'tailwind-variants';
 
 export const labelVariants = tv({
-  base: [
-    'text-sm font-medium text-foreground',
-    // 'data-disabled:',
-    // 'data-invalid:',
-    // 'data-readonly:',
-    // 'data-required:',
-  ],
+  slots: {
+    root: [
+      'text-sm font-medium text-foreground',
+      // 'data-disabled:',
+      // 'data-invalid:',
+      // 'data-readonly:',
+      // 'data-required:',
+    ],
+  },
   defaultVariants: {
     isDisabled: false,
     isInvalid: false,
@@ -17,18 +19,28 @@ export const labelVariants = tv({
   },
   variants: {
     isDisabled: {
-      true: '',
+      true: {
+        root: '',
+      },
     },
     isInvalid: {
-      true: '',
+      true: {
+        root: '',
+      },
     },
     isReadOnly: {
-      true: '',
+      true: {
+        root: '',
+      },
     },
     isRequired: {
-      true: '',
+      true: {
+        root: '',
+      },
     },
   },
 });
 
 export type LabelVariants = VariantProps<typeof labelVariants>;
+// export type SlotsLabelVariants = ReturnType<typeof labelVariants>;
+// export type RequiredLabelVariants = Required<SetNonNullable<LabelVariants>>;

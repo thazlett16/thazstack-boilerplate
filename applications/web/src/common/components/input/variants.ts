@@ -2,15 +2,17 @@ import type { VariantProps } from 'tailwind-variants';
 import { tv } from 'tailwind-variants';
 
 export const inputVariants = tv({
-  base: [
-    // 'data-hovered:',
-    // 'data-focused:',
-    // 'data-focus-visible:',
-    // 'data-disabled:',
-    // 'data-invalid:',
-    // 'data-readonly:',
-    // 'data-required:',
-  ],
+  slots: {
+    root: [
+      // 'data-hovered:',
+      // 'data-focused:',
+      // 'data-focus-visible:',
+      // 'data-disabled:',
+      // 'data-invalid:',
+      // 'data-readonly:',
+      // 'data-required:',
+    ],
+  },
   defaultVariants: {
     isDisabled: false,
     isInvalid: false,
@@ -19,18 +21,28 @@ export const inputVariants = tv({
   },
   variants: {
     isDisabled: {
-      true: '',
+      true: {
+        root: '',
+      },
     },
     isInvalid: {
-      true: '',
+      true: {
+        root: '',
+      },
     },
     isReadOnly: {
-      true: '',
+      true: {
+        root: '',
+      },
     },
     isRequired: {
-      true: '',
+      true: {
+        root: '',
+      },
     },
   },
 });
 
 export type InputVariants = VariantProps<typeof inputVariants>;
+// export type SlotsInputVariants = ReturnType<typeof inputVariants>;
+// export type RequiredInputVariants = Required<SetNonNullable<InputVariants>>;

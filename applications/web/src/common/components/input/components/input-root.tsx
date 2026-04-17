@@ -7,11 +7,13 @@ import { inputVariants } from '../variants';
 export type InputRootProps = RACInputProps & InputVariants;
 
 export function InputRoot(props: InputRootProps) {
+  const slots = inputVariants();
+
   return (
     <RACInput
       {...props}
       className={composeRenderProps(props.className, (className, renderProps) => {
-        return inputVariants({ ...renderProps, className });
+        return slots.root({ ...renderProps, className });
       })}
     />
   );

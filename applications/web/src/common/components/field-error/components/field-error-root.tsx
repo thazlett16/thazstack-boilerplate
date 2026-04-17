@@ -1,20 +1,19 @@
-import type { FieldErrorProps as RACFieldErrorProps, FieldErrorRenderProps } from 'react-aria-components';
-import { FieldError as RACFieldError } from 'react-aria-components';
+import type { FieldErrorProps as RACFieldErrorProps } from 'react-aria-components';
+import { composeRenderProps, FieldError as RACFieldError } from 'react-aria-components';
 
 import { fieldErrorVariants } from '../variants';
 
 export type FieldErrorRootProps = RACFieldErrorProps;
 
-export function FieldErrorRoot({ className: _className, ...props }: FieldErrorRootProps) {
-  const { root } = fieldErrorVariants();
+export function FieldErrorRoot(props: FieldErrorRootProps) {
+  const slots = fieldErrorVariants();
+
   return (
     <RACFieldError
       {...props}
-      className={(renderProps: FieldErrorRenderProps) => {
-        const resolvedClassName =
-          typeof _className === 'function' ? _className({ ...renderProps, defaultClassName: undefined }) : _className;
-        return root({ ...renderProps, className: resolvedClassName });
-      }}
+      className={composeRenderProps(props.className, (className, renderProps) => {
+        return slots.root({ ...renderProps, className });
+      })}
     />
   );
 }

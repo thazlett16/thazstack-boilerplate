@@ -7,3 +7,5 @@ export const fieldErrorVariants = tv({
 });
 
 export type FieldErrorVariants = ReturnType<typeof fieldErrorVariants>;
+// export type SlotsFieldErrorMessageVariants = ReturnType<typeof fieldErrorMessageVariants>;
+// export type RequiredFieldErrorMessageVariants = Required<SetNonNullable<FieldErrorMessageVariants>>;

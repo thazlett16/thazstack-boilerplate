@@ -7,10 +7,17 @@ import { labelVariants } from '../variants';
 export type LabelRootProps = RACLabelProps & LabelVariants;
 
 export function LabelRoot(props: LabelRootProps) {
+  const slots = labelVariants({
+    isDisabled: props.isDisabled,
+    isInvalid: props.isInvalid,
+    isReadOnly: props.isReadOnly,
+    isRequired: props.isRequired,
+  });
+
   return (
     <RACLabel
       {...props}
-      className={labelVariants({ ...props })}
+      className={slots.root({ className: props.className })}
     />
   );
 }

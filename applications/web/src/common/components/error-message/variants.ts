@@ -8,3 +8,5 @@ export const errorMessageVariants = tv({
 });
 
 export type ErrorMessageVariants = VariantProps<typeof errorMessageVariants>;
+// export type SlotsErrorMessageVariants = ReturnType<typeof errorMessageVariants>;
+// export type RequiredErrorMessageVariants = Required<SetNonNullable<ErrorMessageVariants>>;

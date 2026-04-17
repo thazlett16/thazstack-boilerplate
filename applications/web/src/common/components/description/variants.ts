@@ -7,3 +7,5 @@ export const descriptionVariants = tv({
 });
 
 export type DescriptionVariants = ReturnType<typeof descriptionVariants>;
+// export type SlotsDescriptionVariants = ReturnType<typeof descriptionVariants>;
+// export type RequiredDescriptionVariants = Required<SetNonNullable<DescriptionVariants>>;
