@@ -1,6 +1,6 @@
 import type { VariantProps } from 'tailwind-variants';
-
 import { tv } from 'tailwind-variants';
+import type { SetNonNullable } from 'type-fest';
 
 import { surfaceVariants } from '#src/common/components/surface';
 
@@ -31,3 +31,5 @@ export const cardVariants = tv({
 });
 
 export type CardVariants = VariantProps<typeof cardVariants>;
+export type SlotsCardVariants = ReturnType<typeof cardVariants>;
+export type RequiredCardVariants = Required<SetNonNullable<CardVariants>>;

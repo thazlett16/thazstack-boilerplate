@@ -1,8 +1,7 @@
 import type { ComponentPropsWithRef, ReactNode } from 'react';
 
-import type { SurfaceVariants } from '../variants';
-
 import { useSurfaceContext } from '../context';
+import type { SurfaceVariants } from '../variants';
 import { SurfaceContextProvider } from './surface-context-provider';
 
 export interface SurfaceRootProps extends ComponentPropsWithRef<'div'>, SurfaceVariants {
@@ -24,12 +23,12 @@ function SurfaceRootInner(props: SurfaceRootProps) {
     throw new Error('SurfaceRoot must be used within a component that extends a SurfaceContextProvider');
   }
 
-  const { variants } = context;
+  const { slots } = context;
 
   return (
     <div
       {...props}
-      className={variants.root({ className: props.className })}
+      className={slots.root({ className: props.className })}
       data-slot="surface"
     />
   );

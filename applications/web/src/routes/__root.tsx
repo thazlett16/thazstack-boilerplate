@@ -2,9 +2,8 @@ import type { ReactNode } from 'react';
 
 import { HeadContent, Link, Outlet, createRootRouteWithContext, useMatchRoute } from '@tanstack/react-router';
 
-import type { TanStackRouterContext } from '#src/configs/tanstack-router';
-
 import { Devtools } from '#src/common/components/devtools';
+import type { TanStackRouterContext } from '#src/configs/tanstack-router';
 
 import appCss from '#src/global.css?url';
 

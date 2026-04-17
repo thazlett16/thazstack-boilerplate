@@ -1,10 +1,7 @@
 import type { ComponentPropsWithRef, ReactNode } from 'react';
 
-import { Surface } from '#src/common/components/surface';
-
-import type { CardVariants } from '../variants';
-
 import { useCardContext } from '../context';
+import type { CardVariants } from '../variants';
 import { CardContextProvider } from './card-context-provider';
 
 export interface CardRootProps extends ComponentPropsWithRef<'div'>, CardVariants {
@@ -14,28 +11,8 @@ export interface CardRootProps extends ComponentPropsWithRef<'div'>, CardVariant
 export function CardRoot(props: CardRootProps) {
   return (
     <CardContextProvider {...props}>
-      <CardRootWrapper {...props} />
-    </CardContextProvider>
-  );
-}
-
-function CardRootWrapper(props: CardRootProps) {
-  const context = useCardContext();
-
-  if (context === undefined) {
-    throw new Error('CardRoot must be used within a component that extends a CardContextProvider');
-  }
-
-  const { variant } = context;
-
-  if (variant === 'transparent') {
-    return <CardRootInner {...props} />;
-  }
-
-  return (
-    <Surface.Provider variant={variant}>
       <CardRootInner {...props} />
-    </Surface.Provider>
+    </CardContextProvider>
   );
 }
 
@@ -46,12 +23,12 @@ function CardRootInner(props: CardRootProps) {
     throw new Error('CardRoot must be used within a component that extends a CardContextProvider');
   }
 
-  const { variants } = context;
+  const { slots } = context;
 
   return (
     <div
       {...props}
-      className={variants.root({ className: props.className })}
+      className={slots.root({ className: props.className })}
       data-slot="card"
     />
   );

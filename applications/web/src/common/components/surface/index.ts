@@ -11,5 +11,5 @@ export type { SurfaceRootProps } from './components/surface-root';
 
 export { useSurfaceContext } from './context';
 
-export type { SurfaceVariants } from './variants';
+export type { SurfaceVariants, SlotsSurfaceVariants, RequiredSurfaceVariants } from './variants';
 export { surfaceVariants } from './variants';

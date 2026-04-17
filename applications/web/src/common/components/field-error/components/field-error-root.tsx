@@ -1,5 +1,4 @@
 import type { FieldErrorProps as RACFieldErrorProps, FieldErrorRenderProps } from 'react-aria-components';
-
 import { FieldError as RACFieldError } from 'react-aria-components';
 
 import { fieldErrorVariants } from '../variants';

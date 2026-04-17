@@ -13,12 +13,12 @@ export function CardFooter(props: CardFooterProps) {
     throw new Error('CardFooter must be used within a Card or a component that extends a CardContextProvider');
   }
 
-  const { variants } = context;
+  const { slots } = context;
 
   return (
     <div
       {...props}
-      className={variants.footer({
+      className={slots.footer({
         className: props.className,
       })}
       data-slot="card-footer"

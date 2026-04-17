@@ -1,5 +1,4 @@
 import type { TextProps as RACTextProps } from 'react-aria-components';
-
 import { Text } from 'react-aria-components';
 
 import { errorMessageVariants } from '#src/common/components/error-message/variants';

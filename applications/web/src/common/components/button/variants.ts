@@ -1,6 +1,6 @@
 import type { VariantProps } from 'tailwind-variants';
-
 import { tv } from 'tailwind-variants';
+import type { SetNonNullable } from 'type-fest';
 
 export const buttonVariants = tv({
   slots: {
@@ -9,12 +9,12 @@ export const buttonVariants = tv({
       'relative inline-flex items-center justify-center gap-2',
       'font-medium select-none cursor-default transition-colors outline-none',
       '[-webkit-tap-highlight-color:transparent]',
-      // 'data-hovered:',
-      // 'data-pressed:',
-      // 'data-focused:',
-      'data-focus-visible:ring-2 data-focus-visible:ring-offset-2',
       'data-disabled:opacity-50 data-disabled:pointer-events-none',
+      'data-focus-visible:ring-2 data-focus-visible:ring-offset-2',
+      // 'data-focused:',
+      // 'data-hovered:',
       'data-pending:cursor-wait',
+      // 'data-pressed:',
     ],
   },
   defaultVariants: {
@@ -171,3 +171,5 @@ export const buttonVariants = tv({
 });
 
 export type ButtonVariants = VariantProps<typeof buttonVariants>;
+export type SlotsButtonVariants = ReturnType<typeof buttonVariants>;
+export type RequiredButtonVariants = Required<SetNonNullable<ButtonVariants>>;

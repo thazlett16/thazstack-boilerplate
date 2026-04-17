@@ -1,9 +1,9 @@
 import { createContext, use } from 'react';
 
-import type { surfaceVariants, SurfaceVariants } from '#src/common/components/surface/variants';
+import type { RequiredSurfaceVariants, SlotsSurfaceVariants } from './variants';
 
-export interface SurfaceContextType extends NonNullable<SurfaceVariants> {
-  variants: ReturnType<typeof surfaceVariants>;
+export interface SurfaceContextType extends RequiredSurfaceVariants {
+  slots: SlotsSurfaceVariants;
 }
 
 export const SurfaceContext = createContext<SurfaceContextType | undefined>(undefined);

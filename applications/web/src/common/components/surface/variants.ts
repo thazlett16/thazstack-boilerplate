@@ -1,6 +1,6 @@
 import type { VariantProps } from 'tailwind-variants';
-
 import { tv } from 'tailwind-variants';
+import type { SetNonNullable } from 'type-fest';
 
 export const surfaceVariants = tv({
   slots: {
@@ -11,6 +11,9 @@ export const surfaceVariants = tv({
   },
   variants: {
     variant: {
+      transparent: {
+        root: 'bg-transparent',
+      },
       default: {
         root: 'bg-surface-default text-surface-default-foreground',
       },
@@ -25,3 +28,5 @@ export const surfaceVariants = tv({
 });
 
 export type SurfaceVariants = VariantProps<typeof surfaceVariants>;
+export type SlotsSurfaceVariants = ReturnType<typeof surfaceVariants>;
+export type RequiredSurfaceVariants = Required<SetNonNullable<SurfaceVariants>>;

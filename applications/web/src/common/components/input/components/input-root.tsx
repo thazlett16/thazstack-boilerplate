@@ -1,9 +1,7 @@
 import type { InputProps as RACInputProps } from 'react-aria-components';
-
 import { composeRenderProps, Input as RACInput } from 'react-aria-components';
 
 import type { InputVariants } from '../variants';
-
 import { inputVariants } from '../variants';
 
 export type InputRootProps = RACInputProps & InputVariants;

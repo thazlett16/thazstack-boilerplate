@@ -13,12 +13,12 @@ export function CardTitle(props: CardTitleProps) {
     throw new Error('CardTitle must be used within a Card or a component that extends a CardContextProvider');
   }
 
-  const { variants } = context;
+  const { slots } = context;
 
   return (
     <div
       {...props}
-      className={variants.title({
+      className={slots.title({
         className: props.className,
       })}
       data-slot="card-title"

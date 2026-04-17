@@ -704,25 +704,34 @@ export default defineConfig({
       order: 'asc',
       newlinesBetween: true,
       internalPattern: ['#src/', '#test/', '#mock/'],
-      // customGroups: [
-      //   {
-      //     elementNamePattern: ["@thazstack/**"],
-      //     groupName: 'thazstack',
-      //   }
-      // ],
+      customGroups: [
+        {
+          elementNamePattern: ['react', 'react-dom'],
+          groupName: 'react',
+        },
+        {
+          elementNamePattern: ['@tanstack/**'],
+          groupName: 'tanStack',
+        },
+        // {
+        //   elementNamePattern: ['@thazstack/**'],
+        //   groupName: 'thazstack',
+        // },
+      ],
       groups: [
         ['builtin'],
 
-        ['type-external'],
+        ['react'],
+
+        ['tanStack'],
+
         ['external'],
 
         // ['type-thazstack'],
         // ['thazstack'],
 
-        ['type-internal', 'type-subpath'],
         ['internal', 'subpath'],
 
-        ['type-parent', 'type-sibling', 'type-index'],
         ['parent', 'sibling', 'index'],
 
         ['style'],

@@ -13,12 +13,12 @@ export function CardDescription(props: CardDescriptionProps) {
     throw new Error('CardDescription must be used within a Card or a component that extends a CardContextProvider');
   }
 
-  const { variants } = context;
+  const { slots } = context;
 
   return (
     <div
       {...props}
-      className={variants.description({
+      className={slots.description({
         className: props.className,
       })}
       data-slot="card-description"

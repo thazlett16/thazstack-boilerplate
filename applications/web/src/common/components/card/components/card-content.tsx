@@ -13,12 +13,12 @@ export function CardContent(props: CardContentProps) {
     throw new Error('CardContent must be used within a Card or a component that extends a CardContextProvider');
   }
 
-  const { variants } = context;
+  const { slots } = context;
 
   return (
     <div
       {...props}
-      className={variants.content({
+      className={slots.content({
         className: props.className,
       })}
       data-slot="card-content"

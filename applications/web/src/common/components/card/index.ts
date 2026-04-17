@@ -26,5 +26,5 @@ export type { CardTitleProps } from './components/card-title';
 
 export { useCardContext } from './context';
 
-export type { CardVariants } from './variants';
+export type { CardVariants, SlotsCardVariants, RequiredCardVariants } from './variants';
 export { cardVariants } from './variants';
