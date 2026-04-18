@@ -1,10 +1,10 @@
-import { TextFieldRoot } from './components/text-field-root';
+import { TextAreaRoot } from './components/text-field-root';
 
-export const TextField = Object.assign(TextFieldRoot, {
-  Root: TextFieldRoot,
+export const TextArea = Object.assign(TextAreaRoot, {
+  Root: TextAreaRoot,
 });
 
-export type { TextFieldRootProps } from './components/text-field-root';
+export type { TextAreaRootProps } from './components/text-field-root';
 
-export type { TextFieldVariants } from './variants';
-export { textFieldVariants } from './variants';
+export type { TextAreaVariants } from './variants';
+export { textAreaVariants } from './variants';

@@ -1,10 +1,10 @@
 import type { VariantProps } from 'tailwind-variants';
 import { tv } from 'tailwind-variants';
 
-export const textFieldVariants = tv({
+export const textAreaVariants = tv({
   slots: {
     root: [
-      'group/text-field',
+      'group/text-area',
       // 'data-hovered:',
       // 'data-focused:',
       // 'data-focus-visible:',
@@ -44,6 +44,6 @@ export const textFieldVariants = tv({
   },
 });
 
-export type TextFieldVariants = VariantProps<typeof textFieldVariants>;
-// export type SlotsTextFieldVariants = ReturnType<typeof textFieldVariants>;
-// export type RequiredTextFieldVariants = Required<SetNonNullable<TextFieldVariants>>;
+export type TextAreaVariants = VariantProps<typeof textAreaVariants>;
+// export type SlotsTextAreaVariants = ReturnType<typeof textAreaVariants>;
+// export type RequiredTextAreaVariants = Required<SetNonNullable<TextAreaVariants>>;
