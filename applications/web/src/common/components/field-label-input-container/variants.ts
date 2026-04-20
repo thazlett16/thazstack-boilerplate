@@ -4,10 +4,8 @@ export const fieldLabelInputContainerVariants = tv({
   base: [
     'group/field-label-input-container',
     'relative',
-    'px-3 py-2.5',
     'rounded-md',
     'border border-surface-tertiary',
-    'bg-surface-default',
     'transition-colors duration-150',
     'hover:border-primary-hover',
     'focus-within:border-primary',

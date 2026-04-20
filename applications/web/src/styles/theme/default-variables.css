@@ -1,4 +1,7 @@
 :root {
+  /* Field label notch background — overridden per surface so the label always matches */
+  --field-bg: var(--background);
+
   /* Spacing Multiplier */
   --spacing: 0.25rem;
 

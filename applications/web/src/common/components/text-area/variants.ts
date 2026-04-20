@@ -4,6 +4,7 @@ export const textAreaVariants = tv({
   base: [
     'group/text-area',
     'w-full',
+    'px-3 py-2.5',
     'bg-transparent',
     'text-sm text-foreground',
     'outline-none border-0',
