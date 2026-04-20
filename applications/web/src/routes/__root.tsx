@@ -6,17 +6,35 @@ import { Devtools } from '#src/common/components/devtools';
 import type { TanStackRouterContext } from '#src/configs/tanstack-router';
 
 import appCss from '#src/global.css?url';
+import theme1Css from '#src/styles/theme-1.css?url';
+import theme2Css from '#src/styles/theme-2.css?url';
+
+type Customer = 'CUSTOMER1' | 'CUSTOMER2' | 'CUSTOMER3';
+
+const customer = 'CUSTOMER2' as Customer;
 
 export const Route = createRootRouteWithContext<TanStackRouterContext>()({
   head: () => {
-    return {
+    const headUtil = {
       meta: [
         { charSet: 'utf8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { title: 'Design System' },
       ],
-      links: [{ rel: 'stylesheet', href: appCss }],
+      links: [
+        { rel: 'stylesheet', href: appCss },
+        // { rel: 'stylesheet', href: theme1Css },
+        // { rel: 'stylesheet', href: theme2Css },
+      ],
     };
+
+    if (customer === 'CUSTOMER1') {
+      headUtil.links.push({ rel: 'stylesheet', href: theme1Css });
+    } else if (customer === 'CUSTOMER2') {
+      headUtil.links.push({ rel: 'stylesheet', href: theme2Css });
+    }
+
+    return headUtil;
   },
   component: RootComponent,
 });

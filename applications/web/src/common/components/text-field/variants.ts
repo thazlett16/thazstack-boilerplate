@@ -6,6 +6,10 @@ export const textFieldVariants = tv({
     'inline-flex flex-col relative',
     'min-w-0 p-0 m-0 border-0',
 
+    '',
+    '',
+    '',
+
     // TODO : Map invalid states. Mark certain child slots as hidden when invalid
   ],
   variants: {
