@@ -18,4 +18,5 @@ export const TextField = Object.assign(TextFieldRoot, {
 
 export type { TextFieldProps } from './components/text-field';
 
+export type { TextFieldVariants } from './variants';
 export { textFieldVariants } from './variants';

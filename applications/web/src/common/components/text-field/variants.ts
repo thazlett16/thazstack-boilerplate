@@ -1,4 +1,5 @@
 import { tv } from 'tailwind-variants';
+import type { VariantProps } from 'tailwind-variants';
 
 export const textFieldVariants = tv({
   base: ['group/text-field', 'inline-flex flex-col relative', 'min-w-0 p-0 m-0 border-0', 'gap-1.5'],
@@ -9,6 +10,6 @@ export const textFieldVariants = tv({
   },
 });
 
-// export type TextFieldVariants = VariantProps<typeof textFieldVariants>;
+export type TextFieldVariants = VariantProps<typeof textFieldVariants>;
 // export type SlotsTextFieldVariants = ReturnType<typeof textFieldVariants>;
 // export type RequiredTextFieldVariants = Required<SetNonNullable<TextFieldVariants>>;
