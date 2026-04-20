@@ -6,11 +6,17 @@ export const labelVariants = tv({
     'absolute left-3 z-10',
     'top-1/2 -translate-y-1/2',
     'px-1',
-    'bg-surface-default',
+    'bg-inherit',
     'text-sm font-medium leading-none',
     'text-muted-foreground',
     'select-none',
     'transition-all duration-150',
+
+    // required indicator
+    'group-data-[required="true"]/text-field:after:content-["*"]',
+    'group-data-[required="true"]/text-field:after:ml-0.5',
+
+    // hover
     'group-hover/field-label-input-container:text-primary-hover',
     'group-data-[invalid="true"]/text-field:group-hover/field-label-input-container:text-danger-hover',
 
@@ -18,19 +24,19 @@ export const labelVariants = tv({
     'group-has-[textarea]/field-label-input-container:top-3',
     'group-has-[textarea]/field-label-input-container:translate-y-0',
 
-    // input focused → notched (higher specificity than textarea default)
+    // input focused → notched
     'group-has-[input:focus]/field-label-input-container:top-0',
     'group-has-[input:focus]/field-label-input-container:-translate-y-1/2',
     'group-has-[input:focus]/field-label-input-container:text-xs',
     'group-has-[input:focus]/field-label-input-container:text-primary',
 
-    // textarea focused → notched (higher specificity than textarea default)
+    // textarea focused → notched
     'group-has-[textarea:focus]/field-label-input-container:top-0',
     'group-has-[textarea:focus]/field-label-input-container:-translate-y-1/2',
     'group-has-[textarea:focus]/field-label-input-container:text-xs',
     'group-has-[textarea:focus]/field-label-input-container:text-primary',
 
-    // invalid + focused → error color wins over primary (combined specificity beats focus alone)
+    // invalid + focused → error color wins
     'group-data-[invalid="true"]/text-field:group-has-[input:focus]/field-label-input-container:text-danger',
     'group-data-[invalid="true"]/text-field:group-has-[textarea:focus]/field-label-input-container:text-danger',
 
