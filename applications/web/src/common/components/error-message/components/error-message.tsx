@@ -3,16 +3,15 @@ import { Text as RACText } from 'react-aria-components';
 
 import { errorMessageVariants } from '../variants';
 
-export type ErrorMessageRootProps = Omit<RACTextProps, 'slot'>;
+export type ErrorMessageProps = Omit<RACTextProps, 'slot'>;
 
-export function ErrorMessageRoot(props: ErrorMessageRootProps) {
-  const slots = errorMessageVariants();
-
+export function ErrorMessage(props: ErrorMessageProps) {
   return (
     <RACText
       {...props}
+      data-slot="errorMessage"
       slot="errorMessage"
-      className={slots.root({ className: props.className })}
+      className={errorMessageVariants({ ...props })}
     />
   );
 }

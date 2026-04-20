@@ -1,10 +1,5 @@
-import { DescriptionRoot } from './components/description-root';
+export { Description } from './components/description';
 
-export const Description = Object.assign(DescriptionRoot, {
-  Root: DescriptionRoot,
-});
+export type { DescriptionProps } from './components/description';
 
-export type { DescriptionRootProps } from './components/description-root';
-
-export type { DescriptionVariants } from './variants';
 export { descriptionVariants } from './variants';

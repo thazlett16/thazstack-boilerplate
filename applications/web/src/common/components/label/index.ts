@@ -1,10 +1,5 @@
-import { LabelRoot } from './components/label-root';
+export { Label } from './components/label';
 
-export const Label = Object.assign(LabelRoot, {
-  Root: LabelRoot,
-});
+export type { LabelProps } from './components/label';
 
-export type { LabelRootProps } from './components/label-root';
-
-export type { LabelVariants } from './variants';
 export { labelVariants } from './variants';

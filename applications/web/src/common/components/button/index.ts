@@ -1,10 +1,6 @@
-import { ButtonRoot } from './components/button-root';
+export { Button } from './components/button';
 
-export const Button = Object.assign(ButtonRoot, {
-  Root: ButtonRoot,
-});
+export type { ButtonRootProps } from './components/button';
 
-export type { ButtonRootProps } from './components/button-root';
-
-export type { ButtonVariants, RequiredButtonVariants, SlotsButtonVariants } from './variants';
+export type { ButtonVariants, RequiredButtonVariants } from './variants';
 export { buttonVariants } from './variants';

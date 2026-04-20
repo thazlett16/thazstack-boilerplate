@@ -6,19 +6,13 @@ import { buttonVariants } from '../variants';
 
 export type ButtonRootProps = RACButtonProps & ButtonVariants;
 
-export function ButtonRoot(props: ButtonRootProps) {
-  const slots = buttonVariants({
-    variant: props.variant,
-    size: props.size,
-    fullWidth: props.fullWidth,
-    isInverted: props.isInverted,
-  });
-
+export function Button(props: ButtonRootProps) {
   return (
     <RACButton
       {...props}
+      data-slot="button"
       className={composeRenderProps(props.className, (className, renderProps) => {
-        return slots.root({ ...renderProps, className });
+        return buttonVariants({ ...props, ...renderProps, className });
       })}
     />
   );

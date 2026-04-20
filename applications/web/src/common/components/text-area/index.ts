@@ -1,10 +1,5 @@
-import { TextAreaRoot } from './components/text-field-root';
+export { TextArea } from './components/text-area';
 
-export const TextArea = Object.assign(TextAreaRoot, {
-  Root: TextAreaRoot,
-});
+export type { TextAreaProps } from './components/text-area';
 
-export type { TextAreaRootProps } from './components/text-field-root';
-
-export type { TextAreaVariants } from './variants';
 export { textAreaVariants } from './variants';

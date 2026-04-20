@@ -1,10 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router';
 
-import { Description } from '#src/common/components/description';
-import { FieldError } from '#src/common/components/field-error';
-import { Input } from '#src/common/components/input';
-import { Label } from '#src/common/components/label';
-import { TextArea } from '#src/common/components/text-area';
 import { TextField } from '#src/common/components/text-field';
 
 export const Route = createFileRoute('/home')({
@@ -15,17 +10,17 @@ function RouteComponent() {
   return (
     <div className="flex flex-col gap-10 p-8">
       <div className="flex flex-col gap-3 max-w-xs">HOME</div>
+      <TextField.Root isInvalid={true}>
+        <TextField.Label>Test Input</TextField.Label>
+        <TextField.Input />
+        <TextField.Description>Test Description Input</TextField.Description>
+        <TextField.FieldError>Test Error Message</TextField.FieldError>
+      </TextField.Root>
       <TextField>
-        <Label>Test Input</Label>
-        <Input />
-        <Description>Test Description Input</Description>
-        <FieldError>Test Error Message</FieldError>
-      </TextField>
-      <TextField>
-        <Label>Test Area</Label>
-        <TextArea />
-        <Description>Test Description Area</Description>
-        <FieldError>Test Error Message</FieldError>
+        <TextField.Label>Test Area</TextField.Label>
+        <TextField.TextArea />
+        <TextField.Description>Test Description Area</TextField.Description>
+        <TextField.FieldError>Test Error Message</TextField.FieldError>
       </TextField>
     </div>
   );

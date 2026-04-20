@@ -1,10 +1,5 @@
-import { FieldErrorRoot } from './components/field-error-root';
+export { FieldError } from './components/field-error';
 
-export const FieldError = Object.assign(FieldErrorRoot, {
-  Root: FieldErrorRoot,
-});
+export type { FieldErrorProps } from './components/field-error';
 
-export type { FieldErrorRootProps } from './components/field-error-root';
-
-export type { FieldErrorVariants } from './variants';
 export { fieldErrorVariants } from './variants';

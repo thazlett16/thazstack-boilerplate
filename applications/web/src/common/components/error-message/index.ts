@@ -1,10 +1,5 @@
-import { ErrorMessageRoot } from './components/error-message-root';
+export { ErrorMessage } from './components/error-message';
 
-export const ErrorMessage = Object.assign(ErrorMessageRoot, {
-  Root: ErrorMessageRoot,
-});
+export type { ErrorMessageProps } from './components/error-message';
 
-export type { ErrorMessageRootProps } from './components/error-message-root';
-
-export type { ErrorMessageVariants } from './variants';
 export { errorMessageVariants } from './variants';

@@ -3,16 +3,15 @@ import { composeRenderProps, FieldError as RACFieldError } from 'react-aria-comp
 
 import { fieldErrorVariants } from '../variants';
 
-export type FieldErrorRootProps = RACFieldErrorProps;
+export type FieldErrorProps = RACFieldErrorProps;
 
-export function FieldErrorRoot(props: FieldErrorRootProps) {
-  const slots = fieldErrorVariants();
-
+export function FieldError(props: FieldErrorProps) {
   return (
     <RACFieldError
       {...props}
+      data-slot="field-error"
       className={composeRenderProps(props.className, (className, renderProps) => {
-        return slots.root({ ...renderProps, className });
+        return fieldErrorVariants({ ...props, ...renderProps, className });
       })}
     />
   );

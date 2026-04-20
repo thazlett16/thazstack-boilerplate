@@ -1,47 +1,20 @@
-import type { VariantProps } from 'tailwind-variants';
 import { tv } from 'tailwind-variants';
 
 export const textFieldVariants = tv({
-  slots: {
-    root: [
-      'group/text-field',
-      'text-sm font-medium text-foreground',
-      // 'data-disabled:',
-      // 'data-invalid:',
-      // 'data-readonly:',
-      // 'data-required:',
-    ],
-  },
-  defaultVariants: {
-    isDisabled: false,
-    isInvalid: false,
-    isReadOnly: false,
-    isRequired: false,
-  },
+  base: [
+    'group/text-field',
+    'inline-flex flex-col relative',
+    'min-w-0 p-0 m-0 border-0',
+
+    // TODO : Map invalid states. Mark certain child slots as hidden when invalid
+  ],
   variants: {
-    isDisabled: {
-      true: {
-        root: '',
-      },
-    },
-    isInvalid: {
-      true: {
-        root: '',
-      },
-    },
-    isReadOnly: {
-      true: {
-        root: '',
-      },
-    },
-    isRequired: {
-      true: {
-        root: '',
-      },
+    fullWidth: {
+      true: 'w-full *:data-[slot="input"]:w-full *:data-[slot="textarea"]:w-full',
     },
   },
 });
 
-export type TextFieldVariants = VariantProps<typeof textFieldVariants>;
+// export type TextFieldVariants = VariantProps<typeof textFieldVariants>;
 // export type SlotsTextFieldVariants = ReturnType<typeof textFieldVariants>;
 // export type RequiredTextFieldVariants = Required<SetNonNullable<TextFieldVariants>>;

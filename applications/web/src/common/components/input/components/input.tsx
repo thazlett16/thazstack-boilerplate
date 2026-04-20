@@ -1,19 +1,17 @@
 import type { InputProps as RACInputProps } from 'react-aria-components';
 import { composeRenderProps, Input as RACInput } from 'react-aria-components';
 
-import type { InputVariants } from '../variants';
 import { inputVariants } from '../variants';
 
-export type InputRootProps = RACInputProps & InputVariants;
+export type InputRootProps = RACInputProps;
 
-export function InputRoot(props: InputRootProps) {
-  const slots = inputVariants();
-
+export function Input(props: InputRootProps) {
   return (
     <RACInput
       {...props}
+      data-slot="input"
       className={composeRenderProps(props.className, (className, renderProps) => {
-        return slots.root({ ...renderProps, className });
+        return inputVariants({ ...props, ...renderProps, className });
       })}
     />
   );

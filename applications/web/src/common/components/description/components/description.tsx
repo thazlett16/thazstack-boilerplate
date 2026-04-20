@@ -3,16 +3,15 @@ import { Text as RACText } from 'react-aria-components';
 
 import { descriptionVariants } from '../variants';
 
-export type DescriptionRootProps = Omit<RACTextProps, 'slot'>;
+export type DescriptionProps = Omit<RACTextProps, 'slot'>;
 
-export function DescriptionRoot(props: DescriptionRootProps) {
-  const slots = descriptionVariants();
-
+export function Description(props: DescriptionProps) {
   return (
     <RACText
       {...props}
+      data-slot="description"
       slot="description"
-      className={slots.root({ className: props.className })}
+      className={descriptionVariants({ ...props })}
     />
   );
 }
