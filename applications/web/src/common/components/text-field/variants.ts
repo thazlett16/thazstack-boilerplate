@@ -1,17 +1,7 @@
 import { tv } from 'tailwind-variants';
 
 export const textFieldVariants = tv({
-  base: [
-    'group/text-field',
-    'inline-flex flex-col relative',
-    'min-w-0 p-0 m-0 border-0',
-
-    '',
-    '',
-    '',
-
-    // TODO : Map invalid states. Mark certain child slots as hidden when invalid
-  ],
+  base: ['group/text-field', 'inline-flex flex-col relative', 'min-w-0 p-0 m-0 border-0', 'gap-1.5'],
   variants: {
     fullWidth: {
       true: 'w-full *:data-[slot="input"]:w-full *:data-[slot="textarea"]:w-full',

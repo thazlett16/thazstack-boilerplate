@@ -19,7 +19,7 @@ function RouteComponent() {
         <TextField.FieldError>Test Error Message</TextField.FieldError>
       </TextField>
 
-      <TextField>
+      <TextField isInvalid={true}>
         <TextField.FieldLabelInputContainer>
           <TextField.Label>Test Area</TextField.Label>
           <TextField.TextArea placeholder="Test Area Placeholder" />

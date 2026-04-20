@@ -3,17 +3,52 @@ import { tv } from 'tailwind-variants';
 export const labelVariants = tv({
   base: [
     'group/label',
+    'absolute left-3 z-10',
+    'top-1/2 -translate-y-1/2',
+    'px-1',
+    'bg-surface-default',
+    'text-sm font-medium leading-none',
+    'text-muted-foreground',
+    'select-none',
+    'transition-all duration-150',
+    'group-hover/field-label-input-container:text-primary-hover',
+    'group-data-[invalid="true"]/text-field:group-hover/field-label-input-container:text-danger-hover',
 
-    '',
-    '',
-    '',
+    // textarea: override vertical centering → sit at first line
+    'group-has-[textarea]/field-label-input-container:top-3',
+    'group-has-[textarea]/field-label-input-container:translate-y-0',
 
-    // 'block absolute top-0 left-0',
-    // 'text-sm font-medium text-foreground',
-    // 'data-disabled:',
-    // 'data-invalid:',
-    // 'data-readonly:',
-    // 'data-required:',
+    // input focused → notched (higher specificity than textarea default)
+    'group-has-[input:focus]/field-label-input-container:top-0',
+    'group-has-[input:focus]/field-label-input-container:-translate-y-1/2',
+    'group-has-[input:focus]/field-label-input-container:text-xs',
+    'group-has-[input:focus]/field-label-input-container:text-primary',
+
+    // textarea focused → notched (higher specificity than textarea default)
+    'group-has-[textarea:focus]/field-label-input-container:top-0',
+    'group-has-[textarea:focus]/field-label-input-container:-translate-y-1/2',
+    'group-has-[textarea:focus]/field-label-input-container:text-xs',
+    'group-has-[textarea:focus]/field-label-input-container:text-primary',
+
+    // invalid + focused → error color wins over primary (combined specificity beats focus alone)
+    'group-data-[invalid="true"]/text-field:group-has-[input:focus]/field-label-input-container:text-danger',
+    'group-data-[invalid="true"]/text-field:group-has-[textarea:focus]/field-label-input-container:text-danger',
+
+    // input has value → notched
+    'group-has-[input:not(:placeholder-shown)]/field-label-input-container:top-0',
+    'group-has-[input:not(:placeholder-shown)]/field-label-input-container:-translate-y-1/2',
+    'group-has-[input:not(:placeholder-shown)]/field-label-input-container:text-xs',
+
+    // textarea has value → notched
+    'group-has-[textarea:not(:placeholder-shown)]/field-label-input-container:top-0',
+    'group-has-[textarea:not(:placeholder-shown)]/field-label-input-container:-translate-y-1/2',
+    'group-has-[textarea:not(:placeholder-shown)]/field-label-input-container:text-xs',
+
+    // invalid
+    'group-data-[invalid="true"]/text-field:text-danger',
+
+    // disabled
+    'group-data-[disabled="true"]/text-field:cursor-not-allowed',
   ],
 });
 

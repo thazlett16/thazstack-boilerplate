@@ -3,13 +3,19 @@ import { tv } from 'tailwind-variants';
 export const textAreaVariants = tv({
   base: [
     'group/text-area',
-    // 'data-hovered:',
-    // 'data-focused:',
-    // 'data-focus-visible:',
-    // 'data-disabled:',
-    // 'data-invalid:',
-    // 'data-readonly:',
-    // 'data-required:',
+    'w-full',
+    'bg-transparent',
+    'text-sm text-foreground',
+    'outline-none border-0',
+    'resize-y min-h-20',
+    'placeholder:text-muted-foreground/50',
+    'placeholder:opacity-0',
+    'placeholder:transition-opacity placeholder:duration-150',
+    'group-focus-within/field-label-input-container:placeholder:opacity-100',
+    'data-[disabled]:cursor-not-allowed',
+    'data-[disabled]:text-muted-foreground',
+    'data-[readonly]:cursor-default',
+    'data-[readonly]:resize-none',
   ],
 });
 
