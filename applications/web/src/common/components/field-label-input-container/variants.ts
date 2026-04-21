@@ -1,3 +1,4 @@
+import type { VariantProps } from 'tailwind-variants';
 import { tv } from 'tailwind-variants';
 
 export const fieldLabelInputContainerVariants = tv({
@@ -18,6 +19,6 @@ export const fieldLabelInputContainerVariants = tv({
   ],
 });
 
-// export type FieldLabelInputContainerVariants = ReturnType<typeof fieldLabelInputContainerVariants>;
+export type FieldLabelInputContainerVariants = VariantProps<typeof fieldLabelInputContainerVariants>;
 // export type SlotsFieldLabelInputContainerMessageVariants = ReturnType<typeof fieldLabelInputContainerVariants>;
 // export type RequiredFieldLabelInputContainerMessageVariants = Required<SetNonNullable<FieldLabelInputContainerMessageVariants>>;

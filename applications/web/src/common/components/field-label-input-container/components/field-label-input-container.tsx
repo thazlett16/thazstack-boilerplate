@@ -1,8 +1,9 @@
 import type { ComponentPropsWithRef, ReactNode } from 'react';
 
+import type { FieldLabelInputContainerVariants } from '../variants';
 import { fieldLabelInputContainerVariants } from '../variants';
 
-export interface FieldLabelInputContainerProps extends ComponentPropsWithRef<'div'> {
+export interface FieldLabelInputContainerProps extends ComponentPropsWithRef<'div'>, FieldLabelInputContainerVariants {
   children: ReactNode;
 }
 
