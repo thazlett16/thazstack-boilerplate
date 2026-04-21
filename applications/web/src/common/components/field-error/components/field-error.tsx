@@ -1,9 +1,14 @@
+import type { ReactNode } from 'react';
+
 import type { FieldErrorProps as RACFieldErrorProps } from 'react-aria-components';
 import { composeRenderProps, FieldError as RACFieldError } from 'react-aria-components';
 
+import type { FieldErrorVariants } from '../variants';
 import { fieldErrorVariants } from '../variants';
 
-export type FieldErrorProps = RACFieldErrorProps;
+export interface FieldErrorProps extends RACFieldErrorProps, FieldErrorVariants {
+  children: ReactNode;
+}
 
 export function FieldError(props: FieldErrorProps) {
   return (

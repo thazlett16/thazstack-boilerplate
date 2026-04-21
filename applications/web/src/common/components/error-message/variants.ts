@@ -1,3 +1,4 @@
+import type { VariantProps } from 'tailwind-variants';
 import { tv } from 'tailwind-variants';
 
 export const errorMessageVariants = tv({
@@ -8,6 +9,6 @@ export const errorMessageVariants = tv({
   ],
 });
 
-// export type ErrorMessageVariants = VariantProps<typeof errorMessageVariants>;
+export type ErrorMessageVariants = VariantProps<typeof errorMessageVariants>;
 // export type SlotsErrorMessageVariants = ReturnType<typeof errorMessageVariants>;
 // export type RequiredErrorMessageVariants = Required<SetNonNullable<ErrorMessageVariants>>;

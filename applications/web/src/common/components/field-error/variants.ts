@@ -1,3 +1,4 @@
+import type { VariantProps } from 'tailwind-variants';
 import { tv } from 'tailwind-variants';
 
 export const fieldErrorVariants = tv({
@@ -11,6 +12,6 @@ export const fieldErrorVariants = tv({
   ],
 });
 
-// export type FieldErrorVariants = ReturnType<typeof fieldErrorVariants>;
+export type FieldErrorVariants = VariantProps<typeof fieldErrorVariants>;
 // export type SlotsFieldErrorMessageVariants = ReturnType<typeof fieldErrorMessageVariants>;
 // export type RequiredFieldErrorMessageVariants = Required<SetNonNullable<FieldErrorMessageVariants>>;

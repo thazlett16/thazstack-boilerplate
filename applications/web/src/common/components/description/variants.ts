@@ -1,3 +1,4 @@
+import type { VariantProps } from 'tailwind-variants';
 import { tv } from 'tailwind-variants';
 
 export const descriptionVariants = tv({
@@ -10,6 +11,6 @@ export const descriptionVariants = tv({
   ],
 });
 
-// export type DescriptionVariants = ReturnType<typeof descriptionVariants>;
+export type DescriptionVariants = VariantProps<typeof descriptionVariants>;
 // export type SlotsDescriptionVariants = ReturnType<typeof descriptionVariants>;
 // export type RequiredDescriptionVariants = Required<SetNonNullable<DescriptionVariants>>;
