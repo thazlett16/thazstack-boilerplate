@@ -4,7 +4,7 @@ export const descriptionVariants = tv({
   base: [
     'group/description',
 
-    'text-xs text-muted-foreground',
+    'text-muted-foreground text-xs',
 
     'group-data-[invalid="true"]/text-field:hidden',
   ],

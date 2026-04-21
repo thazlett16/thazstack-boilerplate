@@ -11,7 +11,7 @@ export const Route = createFileRoute('/surfaces')({
 // ---------------------------------------------------------------------------
 
 function SectionLabel({ children }: { children: string }) {
-  return <p className="text-[0.65rem] font-bold uppercase tracking-widest opacity-40 mb-3">{children}</p>;
+  return <p className="mb-3 text-[0.65rem] font-bold tracking-widest uppercase opacity-40">{children}</p>;
 }
 
 // ---------------------------------------------------------------------------
@@ -20,39 +20,39 @@ function SectionLabel({ children }: { children: string }) {
 
 function RouteComponent() {
   return (
-    <div className="flex flex-col gap-10 p-8 max-w-2xl">
+    <div className="flex max-w-2xl flex-col gap-10 p-8">
       {/* Variant overview */}
       <section>
         <SectionLabel>Variants</SectionLabel>
         <div className="flex flex-col gap-3">
           <div className="flex items-center gap-3">
-            <span className="w-20 shrink-0 text-xs text-muted-foreground">default</span>
+            <span className="text-muted-foreground w-20 shrink-0 text-xs">default</span>
             <Surface
               variant="default"
-              className="flex-1 rounded-xl border border-border p-4"
+              className="border-border flex-1 rounded-xl border p-4"
             >
               <p className="text-sm font-medium">Default surface</p>
-              <p className="text-xs opacity-60 mt-0.5">bg-surface-default · the base layer</p>
+              <p className="mt-0.5 text-xs opacity-60">bg-surface-default · the base layer</p>
             </Surface>
           </div>
           <div className="flex items-center gap-3">
-            <span className="w-20 shrink-0 text-xs text-muted-foreground">secondary</span>
+            <span className="text-muted-foreground w-20 shrink-0 text-xs">secondary</span>
             <Surface
               variant="secondary"
-              className="flex-1 rounded-xl border border-border p-4"
+              className="border-border flex-1 rounded-xl border p-4"
             >
               <p className="text-sm font-medium">Secondary surface</p>
-              <p className="text-xs opacity-60 mt-0.5">bg-surface-secondary · slightly recessed</p>
+              <p className="mt-0.5 text-xs opacity-60">bg-surface-secondary · slightly recessed</p>
             </Surface>
           </div>
           <div className="flex items-center gap-3">
-            <span className="w-20 shrink-0 text-xs text-muted-foreground">tertiary</span>
+            <span className="text-muted-foreground w-20 shrink-0 text-xs">tertiary</span>
             <Surface
               variant="tertiary"
-              className="flex-1 rounded-xl border border-border p-4"
+              className="border-border flex-1 rounded-xl border p-4"
             >
               <p className="text-sm font-medium">Tertiary surface</p>
-              <p className="text-xs opacity-60 mt-0.5">bg-surface-tertiary · deepest layer</p>
+              <p className="mt-0.5 text-xs opacity-60">bg-surface-tertiary · deepest layer</p>
             </Surface>
           </div>
         </div>
@@ -61,25 +61,25 @@ function RouteComponent() {
       {/* Stacked / nested layers */}
       <section>
         <SectionLabel>Nested layers</SectionLabel>
-        <p className="text-xs text-muted-foreground mb-3">
+        <p className="text-muted-foreground mb-3 text-xs">
           Surfaces compose naturally — each step down reads as recessed relative to the one above.
         </p>
         <Surface
           variant="default"
-          className="rounded-xl border border-border p-4 flex flex-col gap-3"
+          className="border-border flex flex-col gap-3 rounded-xl border p-4"
         >
           <p className="text-xs font-semibold opacity-50">default</p>
           <Surface
             variant="secondary"
-            className="rounded-lg border border-border p-4 flex flex-col gap-3"
+            className="border-border flex flex-col gap-3 rounded-lg border p-4"
           >
             <p className="text-xs font-semibold opacity-50">secondary</p>
             <Surface
               variant="tertiary"
-              className="rounded-lg border border-border p-3"
+              className="border-border rounded-lg border p-3"
             >
               <p className="text-xs font-semibold opacity-50">tertiary</p>
-              <p className="text-xs opacity-60 mt-1">Deepest nesting level</p>
+              <p className="mt-1 text-xs opacity-60">Deepest nesting level</p>
             </Surface>
           </Surface>
         </Surface>
@@ -88,22 +88,22 @@ function RouteComponent() {
       {/* Practical usage */}
       <section>
         <SectionLabel>Sidebar layout</SectionLabel>
-        <p className="text-xs text-muted-foreground mb-3">
+        <p className="text-muted-foreground mb-3 text-xs">
           A typical two-pane layout using surface layers to create visual hierarchy.
         </p>
         <Surface
           variant="default"
-          className="rounded-xl border border-border overflow-hidden flex h-48"
+          className="border-border flex h-48 overflow-hidden rounded-xl border"
         >
           <Surface
             variant="secondary"
-            className="w-36 shrink-0 border-r border-border p-3 flex flex-col gap-1"
+            className="border-border flex w-36 shrink-0 flex-col gap-1 border-r p-3"
           >
             {['Overview', 'Analytics', 'Settings', 'Billing'].map((item) => (
               <button
                 key={item}
                 type="button"
-                className="w-full text-left text-xs px-2 py-1.5 rounded-md text-muted-foreground hover:bg-surface-tertiary hover:text-foreground transition-colors"
+                className="text-muted-foreground w-full rounded-md px-2 py-1.5 text-left text-xs transition-colors hover:bg-surface-tertiary hover:text-foreground"
               >
                 {item}
               </button>
@@ -111,7 +111,7 @@ function RouteComponent() {
           </Surface>
           <div className="flex-1 p-4">
             <p className="text-sm font-semibold">Overview</p>
-            <p className="text-xs text-muted-foreground mt-1">Main content area on default surface</p>
+            <p className="text-muted-foreground mt-1 text-xs">Main content area on default surface</p>
           </div>
         </Surface>
       </section>
@@ -121,10 +121,10 @@ function RouteComponent() {
         <SectionLabel>Code panel</SectionLabel>
         <Surface
           variant="tertiary"
-          className="rounded-xl border border-border p-4"
+          className="border-border rounded-xl border p-4"
         >
-          <p className="text-[0.65rem] font-bold uppercase tracking-widest opacity-40 mb-2">surfaces.tsx</p>
-          <pre className="text-xs font-mono opacity-75 leading-relaxed">{`<Surface variant="default">
+          <p className="mb-2 text-[0.65rem] font-bold tracking-widest uppercase opacity-40">surfaces.tsx</p>
+          <pre className="font-mono text-xs leading-relaxed opacity-75">{`<Surface variant="default">
   <Surface variant="secondary">
     <Surface variant="tertiary">
       deepest layer

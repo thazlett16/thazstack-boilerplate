@@ -1,5 +1,5 @@
 :root {
-  /* Field label notch background — overridden per surface so the label always matches */
+  /* Field container background — one step elevated above the current surface; overridden per surface */
   --field: var(--surface-default);
   --field-foreground: var(--surface-default-foreground);
   --field-hover: var(--surface-default-hover);

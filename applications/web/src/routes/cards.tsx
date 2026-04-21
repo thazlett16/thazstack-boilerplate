@@ -12,7 +12,7 @@ export const Route = createFileRoute('/cards')({
 // ---------------------------------------------------------------------------
 
 function SectionLabel({ children }: { children: string }) {
-  return <p className="text-[0.65rem] font-bold uppercase tracking-widest opacity-40 mb-3">{children}</p>;
+  return <p className="mb-3 text-[0.65rem] font-bold tracking-widest uppercase opacity-40">{children}</p>;
 }
 
 // ---------------------------------------------------------------------------
@@ -21,7 +21,7 @@ function SectionLabel({ children }: { children: string }) {
 
 function RouteComponent() {
   return (
-    <div className="flex flex-col gap-10 p-8 max-w-2xl">
+    <div className="flex max-w-2xl flex-col gap-10 p-8">
       {/* Stat cards */}
       <section>
         <SectionLabel>Stat cards</SectionLabel>
@@ -33,7 +33,7 @@ function RouteComponent() {
             </Card.Header>
             <Card.Content>
               <p className="text-2xl font-bold">$12,540</p>
-              <p className="text-xs text-muted-foreground mt-0.5">+8.2% from last month</p>
+              <p className="text-muted-foreground mt-0.5 text-xs">+8.2% from last month</p>
             </Card.Content>
             <Card.Footer>
               <button
@@ -52,7 +52,7 @@ function RouteComponent() {
             </Card.Header>
             <Card.Content>
               <p className="text-2xl font-bold">24</p>
-              <p className="text-xs mt-0.5 opacity-60">3 pending invites</p>
+              <p className="mt-0.5 text-xs opacity-60">3 pending invites</p>
             </Card.Content>
           </Card.Root>
 
@@ -62,10 +62,10 @@ function RouteComponent() {
               <Card.Description>4.2 GB of 10 GB used</Card.Description>
             </Card.Header>
             <Card.Content>
-              <div className="h-1.5 w-full rounded-full bg-border overflow-hidden">
+              <div className="bg-border h-1.5 w-full overflow-hidden rounded-full">
                 <div className="h-full w-[42%] rounded-full bg-primary" />
               </div>
-              <p className="text-xs text-muted-foreground mt-1.5">42% — 5.8 GB remaining</p>
+              <p className="text-muted-foreground mt-1.5 text-xs">42% — 5.8 GB remaining</p>
             </Card.Content>
           </Card.Root>
         </div>
@@ -94,7 +94,7 @@ function RouteComponent() {
               </button>
               <button
                 type="button"
-                className="text-xs font-medium text-muted-foreground hover:underline"
+                className="text-muted-foreground text-xs font-medium hover:underline"
               >
                 Dismiss
               </button>
@@ -107,7 +107,7 @@ function RouteComponent() {
               <Card.Description>Jordan left a comment on PR #142</Card.Description>
             </Card.Header>
             <Card.Content>
-              <p className="text-sm opacity-75 italic">
+              <p className="text-sm italic opacity-75">
                 {'"'}Looks good — just a small nit on line 48, otherwise ship it.{'"'}
               </p>
             </Card.Content>
@@ -118,16 +118,16 @@ function RouteComponent() {
       {/* Profile card */}
       <section>
         <SectionLabel>Profile card</SectionLabel>
-        <div className="flex flex-col gap-4 max-w-xs">
+        <div className="flex max-w-xs flex-col gap-4">
           <Card.Root variant="default">
             <Card.Content>
               <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/20">
                   <span className="text-sm font-bold text-primary">JD</span>
                 </div>
                 <div className="min-w-0">
-                  <p className="text-sm font-semibold truncate">Jordan Davis</p>
-                  <p className="text-xs text-muted-foreground truncate">jordan@company.com</p>
+                  <p className="truncate text-sm font-semibold">Jordan Davis</p>
+                  <p className="text-muted-foreground truncate text-xs">jordan@company.com</p>
                 </div>
               </div>
             </Card.Content>
@@ -140,7 +140,7 @@ function RouteComponent() {
               </button>
               <button
                 type="button"
-                className="text-xs font-medium text-muted-foreground hover:underline"
+                className="text-muted-foreground text-xs font-medium hover:underline"
               >
                 Remove
               </button>
@@ -152,7 +152,7 @@ function RouteComponent() {
       {/* Form / action card */}
       <section>
         <SectionLabel>Action card</SectionLabel>
-        <div className="flex flex-col gap-4 max-w-sm">
+        <div className="flex max-w-sm flex-col gap-4">
           <Card.Root variant="default">
             <Card.Header>
               <Card.Title>Invite team member</Card.Title>
@@ -163,9 +163,9 @@ function RouteComponent() {
                 <input
                   type="email"
                   placeholder="colleague@company.com"
-                  className="w-full rounded-lg border border-border bg-surface-secondary px-3 py-1.5 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary"
+                  className="border-border placeholder:text-muted-foreground w-full rounded-lg border bg-surface-secondary px-3 py-1.5 text-sm focus:ring-1 focus:ring-primary focus:outline-none"
                 />
-                <select className="w-full rounded-lg border border-border bg-surface-secondary px-3 py-1.5 text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary">
+                <select className="border-border w-full rounded-lg border bg-surface-secondary px-3 py-1.5 text-sm text-foreground focus:ring-1 focus:ring-primary focus:outline-none">
                   <option>Member</option>
                   <option>Admin</option>
                   <option>Viewer</option>
@@ -175,13 +175,13 @@ function RouteComponent() {
             <Card.Footer>
               <button
                 type="button"
-                className="rounded-lg bg-primary px-3 py-1.5 text-xs font-semibold hover:opacity-90 transition-opacity"
+                className="rounded-lg bg-primary px-3 py-1.5 text-xs font-semibold transition-opacity hover:opacity-90"
               >
                 Send invite
               </button>
               <button
                 type="button"
-                className="text-xs font-medium text-muted-foreground hover:underline"
+                className="text-muted-foreground text-xs font-medium hover:underline"
               >
                 Cancel
               </button>
@@ -193,7 +193,7 @@ function RouteComponent() {
       {/* Settings row card */}
       <section>
         <SectionLabel>Settings cards</SectionLabel>
-        <div className="flex flex-col gap-2 max-w-sm">
+        <div className="flex max-w-sm flex-col gap-2">
           {[
             { label: 'Email notifications', description: 'Receive updates via email', enabled: true },
             { label: 'Two-factor authentication', description: 'Add an extra layer of security', enabled: false },
@@ -207,10 +207,10 @@ function RouteComponent() {
                 <div className="flex items-center justify-between gap-4">
                   <div>
                     <p className="text-sm font-medium">{label}</p>
-                    <p className="text-xs text-muted-foreground mt-0.5">{description}</p>
+                    <p className="text-muted-foreground mt-0.5 text-xs">{description}</p>
                   </div>
                   <div
-                    className={`h-5 w-9 rounded-full shrink-0 transition-colors ${enabled ? 'bg-primary' : 'bg-border'}`}
+                    className={`h-5 w-9 shrink-0 rounded-full transition-colors ${enabled ? 'bg-primary' : 'bg-border'}`}
                   />
                 </div>
               </Card.Content>
@@ -222,7 +222,7 @@ function RouteComponent() {
       {/* Transparent variant */}
       <section>
         <SectionLabel>Transparent variant</SectionLabel>
-        <p className="text-xs text-muted-foreground mb-3">
+        <p className="text-muted-foreground mb-3 text-xs">
           No background or border — inherits the parent surface. Useful for nested content areas. The examples below
           show the same card on three different surface depths.
         </p>
@@ -232,10 +232,10 @@ function RouteComponent() {
               key={bg}
               className="flex items-start gap-3"
             >
-              <span className="w-20 shrink-0 text-xs text-muted-foreground pt-3">{bg}</span>
+              <span className="text-muted-foreground w-20 shrink-0 pt-3 text-xs">{bg}</span>
               <Surface
                 variant={bg}
-                className="flex-1 rounded-xl border border-border p-1"
+                className="border-border flex-1 rounded-xl border p-1"
               >
                 <Card.Root variant="transparent">
                   <Card.Header>

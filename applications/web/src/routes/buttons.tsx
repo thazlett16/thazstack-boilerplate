@@ -11,7 +11,7 @@ export const Route = createFileRoute('/buttons')({
 // ---------------------------------------------------------------------------
 
 function SectionLabel({ children }: { children: string }) {
-  return <p className="text-[0.65rem] font-bold uppercase tracking-widest opacity-40 mb-3">{children}</p>;
+  return <p className="mb-3 text-[0.65rem] font-bold tracking-widest uppercase opacity-40">{children}</p>;
 }
 
 // ---------------------------------------------------------------------------
@@ -20,7 +20,7 @@ function SectionLabel({ children }: { children: string }) {
 
 function RouteComponent() {
   return (
-    <div className="flex flex-col gap-10 p-8 max-w-2xl">
+    <div className="flex max-w-2xl flex-col gap-10 p-8">
       {/* Color variants */}
       <section>
         <SectionLabel>Color variants</SectionLabel>
@@ -69,7 +69,7 @@ function RouteComponent() {
               key={size}
               className="flex flex-wrap items-center gap-3"
             >
-              <span className="w-6 shrink-0 text-xs text-muted-foreground">{size}</span>
+              <span className="text-muted-foreground w-6 shrink-0 text-xs">{size}</span>
               {(['primary', 'secondary', 'danger', 'success', 'warning', 'ghost', 'outline'] as const).map(
                 (variant) => (
                   <Button
@@ -121,7 +121,7 @@ function RouteComponent() {
       {/* Inverted */}
       <section>
         <SectionLabel>Inverted</SectionLabel>
-        <p className="text-xs text-muted-foreground mb-3">
+        <p className="text-muted-foreground mb-3 text-xs">
           Tinted background with the color as text — useful on coloured or image surfaces.
         </p>
         <div className="flex flex-wrap gap-3">

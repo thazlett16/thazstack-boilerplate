@@ -2,13 +2,13 @@ import { tv } from 'tailwind-variants';
 
 export const textAreaVariants = tv({
   base: [
-    'group/text-area',
     'w-full',
-    'px-3 py-2.5',
+    'px-3 pt-5 pb-1.5',
+    'leading-normal',
     'bg-transparent',
     'text-sm text-foreground',
-    'outline-none border-0',
-    'resize-y min-h-20',
+    'border-0 outline-none',
+    'min-h-24 resize-y',
     'placeholder:text-muted-foreground/50',
     'placeholder:opacity-0',
     'placeholder:transition-opacity placeholder:duration-150',

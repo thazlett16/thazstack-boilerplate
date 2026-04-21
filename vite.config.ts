@@ -739,6 +739,16 @@ export default defineConfig({
         ['unknown'],
       ],
     },
+
+    sortTailwindcss: {
+      stylesheet: './applications/web/src/global.css',
+      functions: ['clsx', 'cn', 'tv', 'twMerge'],
+      preserveWhitespace: true,
+    },
+
+    sortPackageJson: {
+      sortScripts: false,
+    },
   },
   lint: {
     extends: [fullConfig],

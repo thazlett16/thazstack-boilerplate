@@ -13,14 +13,14 @@ export const Route = createFileRoute('/text-fields')({
 // ---------------------------------------------------------------------------
 
 function SectionLabel({ children }: { children: string }) {
-  return <p className="text-[0.65rem] font-bold uppercase tracking-widest opacity-40 mb-4">{children}</p>;
+  return <p className="mb-4 text-[0.65rem] font-bold tracking-widest uppercase opacity-40">{children}</p>;
 }
 
 function FieldRow({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div className="flex items-start gap-3">
-      <span className="w-20 shrink-0 pt-3 text-xs text-muted-foreground">{label}</span>
-      <div className="flex-1 flex flex-wrap gap-4">{children}</div>
+      <span className="text-muted-foreground w-20 shrink-0 pt-3 text-xs">{label}</span>
+      <div className="flex flex-1 flex-wrap gap-4">{children}</div>
     </div>
   );
 }
@@ -31,7 +31,7 @@ function FieldRow({ label, children }: { label: string; children: React.ReactNod
 
 function RouteComponent() {
   return (
-    <div className="flex flex-col gap-12 p-8 max-w-3xl">
+    <div className="flex max-w-3xl flex-col gap-12 p-8">
       {/* Default */}
       <section>
         <SectionLabel>Default</SectionLabel>
@@ -262,10 +262,10 @@ function RouteComponent() {
               key={variant}
               className="flex items-center gap-3"
             >
-              <span className="w-20 shrink-0 text-xs text-muted-foreground">{variant}</span>
+              <span className="text-muted-foreground w-20 shrink-0 text-xs">{variant}</span>
               <Surface
                 variant={variant}
-                className="flex-1 rounded-xl border border-border p-5"
+                className="border-border flex-1 rounded-xl border p-5"
               >
                 <TextField className="max-w-xs">
                   <TextField.FieldLabelInputContainer>

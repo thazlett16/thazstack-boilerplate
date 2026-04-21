@@ -4,7 +4,7 @@ export const fieldLabelInputContainerVariants = tv({
   base: [
     'group/field-label-input-container',
     'relative',
-    'bg-(--field-bg)',
+    'bg-[var(--field)]',
     'rounded-md',
     'border border-surface-tertiary',
     'transition-colors duration-150',

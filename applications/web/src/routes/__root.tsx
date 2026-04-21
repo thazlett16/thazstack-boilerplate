@@ -62,8 +62,8 @@ function NavLink({ to, children }: { to: string; children: ReactNode }) {
       to={to}
       className={
         isActive
-          ? 'block text-sm px-2.5 py-1.5 rounded bg-muted text-foreground font-medium'
-          : 'block text-sm px-2.5 py-1.5 rounded text-muted-foreground hover:bg-muted hover:text-foreground transition-colors'
+          ? 'bg-muted block rounded px-2.5 py-1.5 text-sm font-medium text-foreground'
+          : 'text-muted-foreground hover:bg-muted block rounded px-2.5 py-1.5 text-sm transition-colors hover:text-foreground'
       }
     >
       {children}
@@ -80,8 +80,8 @@ function RootComponent() {
     <>
       <HeadContent />
       <div className="flex min-h-screen">
-        <nav className="w-44 shrink-0 border-r border-border flex flex-col p-3 gap-0.5">
-          <p className="px-2.5 pt-1 pb-2 text-[0.6rem] font-bold uppercase tracking-widest opacity-30">Design System</p>
+        <nav className="border-border flex w-44 shrink-0 flex-col gap-0.5 border-r p-3">
+          <p className="px-2.5 pt-1 pb-2 text-[0.6rem] font-bold tracking-widest uppercase opacity-30">Design System</p>
           {NAV_LINKS.map(({ to, label }) => (
             <NavLink
               key={to}
@@ -91,7 +91,7 @@ function RootComponent() {
             </NavLink>
           ))}
         </nav>
-        <main className="flex-1 min-w-0">
+        <main className="min-w-0 flex-1">
           <Outlet />
         </main>
       </div>

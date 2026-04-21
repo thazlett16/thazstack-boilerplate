@@ -9,7 +9,7 @@ export const Route = createFileRoute('/home')({
 function RouteComponent() {
   return (
     <div className="flex flex-col gap-10 p-8">
-      <div className="flex flex-col gap-3 max-w-xs">HOME</div>
+      <div className="flex max-w-xs flex-col gap-3">HOME</div>
       <TextField isInvalid={true}>
         <TextField.FieldLabelInputContainer>
           <TextField.Label>Test Input</TextField.Label>

@@ -2,12 +2,12 @@ import { tv } from 'tailwind-variants';
 
 export const inputVariants = tv({
   base: [
-    'group/input',
     'w-full',
-    'px-3 py-2.5',
+    'px-3 pt-5 pb-1.5',
+    'leading-none',
     'bg-transparent',
     'text-sm text-foreground',
-    'outline-none border-0',
+    'border-0 outline-none',
     'placeholder:text-muted-foreground/50',
     'placeholder:opacity-0',
     'placeholder:transition-opacity placeholder:duration-150',

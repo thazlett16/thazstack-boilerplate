@@ -53,7 +53,7 @@ function ChipPair({
   hasHover: boolean;
 }) {
   return (
-    <div className="flex items-center gap-1 shrink-0">
+    <div className="flex shrink-0 items-center gap-1">
       <div className={chipClass}>Aa</div>
       {hasHover ? (
         <>
@@ -79,7 +79,7 @@ function SwatchRow({ label, bg, fg, hoverBg, hasInv }: SwatchDef) {
       style={cssVars}
       className="flex items-start gap-2.5"
     >
-      <div className="flex flex-col gap-1 shrink-0">
+      <div className="flex shrink-0 flex-col gap-1">
         <ChipPair
           chipClass={`size-9 rounded border border-black/10 flex items-center justify-center text-[0.6rem] font-bold select-none transition-colors duration-150 bg-(--swatch-bg) text-(color:--swatch-fg)${hoverBg ? ' hover:bg-(--swatch-hover) cursor-pointer' : ''}`}
           hoverChipClass="size-5 rounded-sm bg-(--swatch-hover) border border-black/10"
@@ -95,8 +95,8 @@ function SwatchRow({ label, bg, fg, hoverBg, hasInv }: SwatchDef) {
       </div>
 
       <div className="min-w-0 pt-1.5">
-        <p className="text-[0.72rem] font-medium leading-none">{label}</p>
-        <p className="mt-0.5 text-[0.6rem] opacity-35 font-mono leading-none">{`var(${bg})`}</p>
+        <p className="text-[0.72rem] leading-none font-medium">{label}</p>
+        <p className="mt-0.5 font-mono text-[0.6rem] leading-none opacity-35">{`var(${bg})`}</p>
       </div>
     </div>
   );
@@ -104,8 +104,8 @@ function SwatchRow({ label, bg, fg, hoverBg, hasInv }: SwatchDef) {
 
 function ThemeSwatches({ theme }: { theme: 'light' | 'dark' }) {
   return (
-    <div className={`${theme} flex-1 min-w-60 rounded-xl p-5 border border-black/10 bg-background text-foreground`}>
-      <p className="mb-3.5 text-[0.65rem] font-bold uppercase tracking-widest opacity-35">{theme} mode</p>
+    <div className={`${theme} min-w-60 flex-1 rounded-xl border border-black/10 bg-background p-5 text-foreground`}>
+      <p className="mb-3.5 text-[0.65rem] font-bold tracking-widest uppercase opacity-35">{theme} mode</p>
       <div className="flex flex-col gap-2">
         {SWATCHES.map((s) => (
           <SwatchRow
@@ -126,13 +126,13 @@ function RouteComponent() {
   return (
     <div className="flex flex-col gap-8 p-8">
       <div>
-        <h1 className="text-lg font-semibold leading-none">Colors</h1>
-        <p className="mt-1 text-sm text-muted-foreground">
+        <h1 className="text-lg leading-none font-semibold">Colors</h1>
+        <p className="text-muted-foreground mt-1 text-sm">
           Semantic color tokens — base, hover, and inv (tinted) variants.
         </p>
       </div>
 
-      <div className="flex gap-4 flex-wrap">
+      <div className="flex flex-wrap gap-4">
         <ThemeSwatches theme="light" />
         <ThemeSwatches theme="dark" />
       </div>
