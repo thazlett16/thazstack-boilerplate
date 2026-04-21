@@ -1,6 +1,8 @@
 :root {
   /* Field label notch background — overridden per surface so the label always matches */
-  --field-bg: var(--surface-default);
+  --field: var(--surface-default);
+  --field-foreground: var(--surface-default-foreground);
+  --field-hover: var(--surface-default-hover);
 
   /* Spacing Multiplier */
   --spacing: 0.25rem;
@@ -31,40 +33,61 @@
   /* Layered surface surfaces */
   --surface-default: oklch(0.17 0.012 224);
   --surface-default-foreground: oklch(0.93 0.005 220);
+  --surface-default-hover: oklch(0.2 0.012 224);
 
-  --surface-secondary: oklch(0.21 0.013 224);
-  --surface-secondary-foreground: oklch(0.9 0.005 220);
+  --surface-secondary: oklch(0.19 0.0125 224);
+  --surface-secondary-foreground: oklch(0.915 0.005 220);
+  --surface-secondary-hover: oklch(0.22 0.0125 224);
 
-  --surface-tertiary: oklch(0.26 0.015 220);
-  --surface-tertiary-foreground: oklch(0.87 0.005 220);
+  --surface-tertiary: oklch(0.21 0.013 224);
+  --surface-tertiary-foreground: oklch(0.9 0.005 220);
+  --surface-tertiary-hover: oklch(0.24 0.013 224);
+
+  --surface-quaternary: oklch(0.235 0.014 222);
+  --surface-quaternary-foreground: oklch(0.885 0.005 220);
+  --surface-quaternary-hover: oklch(0.265 0.014 222);
+
+  --surface-quinary: oklch(0.26 0.015 220);
+  --surface-quinary-foreground: oklch(0.87 0.005 220);
+  --surface-quinary-hover: oklch(0.29 0.015 220);
 
   /* Semantic: success */
   --success: oklch(0.62 0.16 148);
   --success-foreground: oklch(0.1 0.02 148);
   --success-hover: oklch(0.67 0.16 148);
+  --success-inv: color-mix(in oklab, var(--success) 15%, transparent);
+  --success-inv-foreground: var(--success);
+  --success-inv-hover: color-mix(in oklab, var(--success) 20%, transparent);
 
   /* Semantic: warning */
   --warning: oklch(0.78 0.17 68);
   --warning-foreground: oklch(0.1 0.02 68);
   --warning-hover: oklch(0.83 0.17 68);
+  --warning-inv: color-mix(in oklab, var(--warning) 15%, transparent);
+  --warning-inv-foreground: var(--warning);
+  --warning-inv-hover: color-mix(in oklab, var(--warning) 20%, transparent);
 
   /* Semantic: danger */
   --danger: oklch(0.65 0.2 26);
   --danger-foreground: oklch(0.1 0.02 26);
   --danger-hover: oklch(0.7 0.2 26);
+  --danger-inv: color-mix(in oklab, var(--danger) 15%, transparent);
+  --danger-inv-foreground: var(--danger);
+  --danger-inv-hover: color-mix(in oklab, var(--danger) 20%, transparent);
 
   /* Brand: primary */
   --primary: oklch(0.58 0.11 224);
   --primary-foreground: oklch(0.1 0.015 224);
   --primary-hover: oklch(0.63 0.11 224);
+  --primary-inv: color-mix(in oklab, var(--primary) 15%, transparent);
+  --primary-inv-foreground: var(--primary);
+  --primary-inv-hover: color-mix(in oklab, var(--primary) 20%, transparent);
 
   /* Brand: secondary */
   --secondary: oklch(0.57 0.1 188);
   --secondary-foreground: oklch(0.1 0.015 188);
   --secondary-hover: oklch(0.62 0.1 188);
-
-  /* Muted */
-  --muted: oklch(0.22 0.01 224);
-  --muted-foreground: oklch(0.55 0.01 220);
-  --muted-hover: oklch(0.27 0.012 224);
+  --secondary-inv: color-mix(in oklab, var(--secondary) 15%, transparent);
+  --secondary-inv-foreground: var(--secondary);
+  --secondary-inv-hover: color-mix(in oklab, var(--secondary) 20%, transparent);
 }

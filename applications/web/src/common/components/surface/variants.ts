@@ -15,13 +15,13 @@ export const surfaceVariants = tv({
         root: 'bg-transparent',
       },
       default: {
-        root: 'bg-surface-default text-surface-default-foreground [--field-bg:var(--surface-secondary)]',
+        root: 'bg-surface-default text-surface-default-foreground [--layer-bg:var(--surface-default)] [--field-bg:var(--surface-secondary)]',
       },
       secondary: {
-        root: 'bg-surface-secondary text-surface-secondary-foreground [--field-bg:var(--surface-tertiary)]',
+        root: 'bg-surface-secondary text-surface-secondary-foreground [--layer-bg:var(--surface-secondary)] [--field-bg:var(--surface-tertiary)]',
       },
       tertiary: {
-        root: 'bg-surface-tertiary text-surface-tertiary-foreground [--field-bg:var(--surface-tertiary)]',
+        root: 'bg-surface-tertiary text-surface-tertiary-foreground [--layer-bg:var(--surface-tertiary)] [--field-bg:var(--surface-tertiary)]',
       },
     },
   },

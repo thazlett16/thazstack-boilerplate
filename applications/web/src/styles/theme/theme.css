@@ -9,49 +9,60 @@
 
   --color-surface-default: var(--surface-default);
   --color-surface-default-foreground: var(--surface-default-foreground);
+  --color-surface-default-hover: var(--surface-default-hover);
 
   --color-surface-secondary: var(--surface-secondary);
   --color-surface-secondary-foreground: var(--surface-secondary-foreground);
+  --color-surface-secondary-hover: var(--surface-secondary-hover);
 
   --color-surface-tertiary: var(--surface-tertiary);
   --color-surface-tertiary-foreground: var(--surface-tertiary-foreground);
+  --color-surface-tertiary-hover: var(--surface-tertiary-hover);
+
+  --color-surface-quaternary: var(--surface-quaternary);
+  --color-surface-quaternary-foreground: var(--surface-quaternary-foreground);
+  --color-surface-quaternary-hover: var(--surface-quaternary-hover);
+
+  --color-surface-quinary: var(--surface-quinary);
+  --color-surface-quinary-foreground: var(--surface-quinary-foreground);
+  --color-surface-quinary-hover: var(--surface-quinary-hover);
 
   --color-success: var(--success);
   --color-success-foreground: var(--success-foreground);
   --color-success-hover: var(--success-hover);
-  --color-success-inv: color-mix(in oklab, var(--success) 15%, transparent);
-  --color-success-inv-foreground: var(--success);
-  --color-success-inv-hover: color-mix(in oklab, var(--success) 20%, transparent);
+  --color-success-inv: var(--success-inv);
+  --color-success-inv-foreground: var(--success-inv-foreground);
+  --color-success-inv-hover: var(--success-inv-hover);
 
   --color-warning: var(--warning);
   --color-warning-foreground: var(--warning-foreground);
   --color-warning-hover: var(--warning-hover);
-  --color-warning-inv: color-mix(in oklab, var(--warning) 15%, transparent);
-  --color-warning-inv-foreground: var(--warning);
-  --color-warning-inv-hover: color-mix(in oklab, var(--warning) 20%, transparent);
+  --color-warning-inv: var(--warning-inv);
+  --color-warning-inv-foreground: var(--warning-inv-foreground);
+  --color-warning-inv-hover: var(--warning-inv-hover);
 
   --color-danger: var(--danger);
   --color-danger-foreground: var(--danger-foreground);
   --color-danger-hover: var(--danger-hover);
-  --color-danger-inv: color-mix(in oklab, var(--danger) 15%, transparent);
-  --color-danger-inv-foreground: var(--danger);
-  --color-danger-inv-hover: color-mix(in oklab, var(--danger) 20%, transparent);
+  --color-danger-inv: var(--danger-inv);
+  --color-danger-inv-foreground: var(--danger-inv-foreground);
+  --color-danger-inv-hover: var(--danger-inv-hover);
 
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-primary-hover: var(--primary-hover);
-  --color-primary-inv: color-mix(in oklab, var(--primary) 15%, transparent);
-  --color-primary-inv-foreground: var(--primary);
-  --color-primary-inv-hover: color-mix(in oklab, var(--primary) 20%, transparent);
+  --color-primary-inv: var(--primary-inv);
+  --color-primary-inv-foreground: var(--primary-inv-foreground);
+  --color-primary-inv-hover: var(--primary-inv-hover);
 
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-secondary-hover: var(--secondary-hover);
-  --color-secondary-inv: color-mix(in oklab, var(--secondary) 15%, transparent);
-  --color-secondary-inv-foreground: var(--secondary);
-  --color-secondary-inv-hover: color-mix(in oklab, var(--secondary) 20%, transparent);
+  --color-secondary-inv: var(--secondary-inv);
+  --color-secondary-inv-foreground: var(--secondary-inv-foreground);
+  --color-secondary-inv-hover: var(--secondary-inv-hover);
 
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-muted-hover: var(--muted-hover);
+  --color-field: var(--field);
+  --color-field-foreground: var(--field-foreground);
+  --color-field-hover: var(--field-hover);
 }

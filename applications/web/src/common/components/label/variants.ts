@@ -6,7 +6,7 @@ export const labelVariants = tv({
     'absolute left-3 z-10',
     'top-1/2 -translate-y-1/2',
     'px-1',
-    'bg-[var(--field-bg)]',
+    'bg-[linear-gradient(to_bottom,var(--layer-bg)_50%,var(--field-bg)_50%)]',
     'text-sm font-medium leading-none',
     'text-muted-foreground',
     'select-none',
