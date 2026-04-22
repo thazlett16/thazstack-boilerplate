@@ -127,7 +127,7 @@ function RouteComponent() {
     <div className="flex flex-col gap-8 p-8">
       <div>
         <h1 className="text-lg leading-none font-semibold">Colors</h1>
-        <p className="text-muted-foreground mt-1 text-sm">
+        <p className="mt-1 text-sm text-muted-foreground">
           Semantic color tokens — base, hover, and inv (tinted) variants.
         </p>
       </div>

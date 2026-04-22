@@ -63,8 +63,8 @@ function NavLink({ to, children }: { to: string; children: ReactNode }) {
       to={to}
       className={
         isActive
-          ? 'bg-muted block rounded px-2.5 py-1.5 text-sm font-medium text-foreground'
-          : 'text-muted-foreground hover:bg-muted block rounded px-2.5 py-1.5 text-sm transition-colors hover:text-foreground'
+          ? 'block rounded bg-muted px-2.5 py-1.5 text-sm font-medium text-foreground'
+          : 'block rounded px-2.5 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground'
       }
     >
       {children}

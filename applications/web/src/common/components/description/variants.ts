@@ -5,7 +5,7 @@ export const descriptionVariants = tv({
   base: [
     'group/description',
 
-    'text-muted-foreground text-xs',
+    'text-xs text-muted-foreground',
   ],
 });
 

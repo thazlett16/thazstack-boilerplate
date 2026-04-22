@@ -33,7 +33,7 @@ function RouteComponent() {
             </Card.Header>
             <Card.Content>
               <p className="text-2xl font-bold">$12,540</p>
-              <p className="text-muted-foreground mt-0.5 text-xs">+8.2% from last month</p>
+              <p className="mt-0.5 text-xs text-muted-foreground">+8.2% from last month</p>
             </Card.Content>
             <Card.Footer>
               <button
@@ -65,7 +65,7 @@ function RouteComponent() {
               <div className="bg-border h-1.5 w-full overflow-hidden rounded-full">
                 <div className="h-full w-[42%] rounded-full bg-primary" />
               </div>
-              <p className="text-muted-foreground mt-1.5 text-xs">42% — 5.8 GB remaining</p>
+              <p className="mt-1.5 text-xs text-muted-foreground">42% — 5.8 GB remaining</p>
             </Card.Content>
           </Card.Root>
         </div>
@@ -94,7 +94,7 @@ function RouteComponent() {
               </button>
               <button
                 type="button"
-                className="text-muted-foreground text-xs font-medium hover:underline"
+                className="text-xs font-medium text-muted-foreground hover:underline"
               >
                 Dismiss
               </button>
@@ -127,7 +127,7 @@ function RouteComponent() {
                 </div>
                 <div className="min-w-0">
                   <p className="truncate text-sm font-semibold">Jordan Davis</p>
-                  <p className="text-muted-foreground truncate text-xs">jordan@company.com</p>
+                  <p className="truncate text-xs text-muted-foreground">jordan@company.com</p>
                 </div>
               </div>
             </Card.Content>
@@ -140,7 +140,7 @@ function RouteComponent() {
               </button>
               <button
                 type="button"
-                className="text-muted-foreground text-xs font-medium hover:underline"
+                className="text-xs font-medium text-muted-foreground hover:underline"
               >
                 Remove
               </button>
@@ -163,7 +163,7 @@ function RouteComponent() {
                 <input
                   type="email"
                   placeholder="colleague@company.com"
-                  className="border-border placeholder:text-muted-foreground w-full rounded-lg border bg-surface-secondary px-3 py-1.5 text-sm focus:ring-1 focus:ring-primary focus:outline-none"
+                  className="border-border w-full rounded-lg border bg-surface-secondary px-3 py-1.5 text-sm placeholder:text-muted-foreground focus:ring-1 focus:ring-primary focus:outline-none"
                 />
                 <select className="border-border w-full rounded-lg border bg-surface-secondary px-3 py-1.5 text-sm text-foreground focus:ring-1 focus:ring-primary focus:outline-none">
                   <option>Member</option>
@@ -181,7 +181,7 @@ function RouteComponent() {
               </button>
               <button
                 type="button"
-                className="text-muted-foreground text-xs font-medium hover:underline"
+                className="text-xs font-medium text-muted-foreground hover:underline"
               >
                 Cancel
               </button>
@@ -207,7 +207,7 @@ function RouteComponent() {
                 <div className="flex items-center justify-between gap-4">
                   <div>
                     <p className="text-sm font-medium">{label}</p>
-                    <p className="text-muted-foreground mt-0.5 text-xs">{description}</p>
+                    <p className="mt-0.5 text-xs text-muted-foreground">{description}</p>
                   </div>
                   <div
                     className={`h-5 w-9 shrink-0 rounded-full transition-colors ${enabled ? 'bg-primary' : 'bg-border'}`}
@@ -222,7 +222,7 @@ function RouteComponent() {
       {/* Transparent variant */}
       <section>
         <SectionLabel>Transparent variant</SectionLabel>
-        <p className="text-muted-foreground mb-3 text-xs">
+        <p className="mb-3 text-xs text-muted-foreground">
           No background or border — inherits the parent surface. Useful for nested content areas. The examples below
           show the same card on three different surface depths.
         </p>
@@ -232,7 +232,7 @@ function RouteComponent() {
               key={bg}
               className="flex items-start gap-3"
             >
-              <span className="text-muted-foreground w-20 shrink-0 pt-3 text-xs">{bg}</span>
+              <span className="w-20 shrink-0 pt-3 text-xs text-muted-foreground">{bg}</span>
               <Surface
                 variant={bg}
                 className="border-border flex-1 rounded-xl border p-1"

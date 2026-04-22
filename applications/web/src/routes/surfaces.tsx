@@ -26,7 +26,7 @@ function RouteComponent() {
         <SectionLabel>Variants</SectionLabel>
         <div className="flex flex-col gap-3">
           <div className="flex items-center gap-3">
-            <span className="text-muted-foreground w-20 shrink-0 text-xs">default</span>
+            <span className="w-20 shrink-0 text-xs text-muted-foreground">default</span>
             <Surface
               variant="default"
               className="border-border flex-1 rounded-xl border p-4"
@@ -36,7 +36,7 @@ function RouteComponent() {
             </Surface>
           </div>
           <div className="flex items-center gap-3">
-            <span className="text-muted-foreground w-20 shrink-0 text-xs">secondary</span>
+            <span className="w-20 shrink-0 text-xs text-muted-foreground">secondary</span>
             <Surface
               variant="secondary"
               className="border-border flex-1 rounded-xl border p-4"
@@ -46,7 +46,7 @@ function RouteComponent() {
             </Surface>
           </div>
           <div className="flex items-center gap-3">
-            <span className="text-muted-foreground w-20 shrink-0 text-xs">tertiary</span>
+            <span className="w-20 shrink-0 text-xs text-muted-foreground">tertiary</span>
             <Surface
               variant="tertiary"
               className="border-border flex-1 rounded-xl border p-4"
@@ -61,7 +61,7 @@ function RouteComponent() {
       {/* Stacked / nested layers */}
       <section>
         <SectionLabel>Nested layers</SectionLabel>
-        <p className="text-muted-foreground mb-3 text-xs">
+        <p className="mb-3 text-xs text-muted-foreground">
           Surfaces compose naturally — each step down reads as recessed relative to the one above.
         </p>
         <Surface
@@ -88,7 +88,7 @@ function RouteComponent() {
       {/* Practical usage */}
       <section>
         <SectionLabel>Sidebar layout</SectionLabel>
-        <p className="text-muted-foreground mb-3 text-xs">
+        <p className="mb-3 text-xs text-muted-foreground">
           A typical two-pane layout using surface layers to create visual hierarchy.
         </p>
         <Surface
@@ -103,7 +103,7 @@ function RouteComponent() {
               <button
                 key={item}
                 type="button"
-                className="text-muted-foreground w-full rounded-md px-2 py-1.5 text-left text-xs transition-colors hover:bg-surface-tertiary hover:text-foreground"
+                className="w-full rounded-md px-2 py-1.5 text-left text-xs text-muted-foreground transition-colors hover:bg-surface-tertiary hover:text-foreground"
               >
                 {item}
               </button>
@@ -111,7 +111,7 @@ function RouteComponent() {
           </Surface>
           <div className="flex-1 p-4">
             <p className="text-sm font-semibold">Overview</p>
-            <p className="text-muted-foreground mt-1 text-xs">Main content area on default surface</p>
+            <p className="mt-1 text-xs text-muted-foreground">Main content area on default surface</p>
           </div>
         </Surface>
       </section>

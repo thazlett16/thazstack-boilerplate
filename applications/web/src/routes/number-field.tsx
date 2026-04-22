@@ -19,7 +19,7 @@ function SectionLabel({ children }: { children: string }) {
 function FieldRow({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div className="flex items-start gap-3">
-      <span className="text-muted-foreground w-20 shrink-0 pt-3 text-xs">{label}</span>
+      <span className="w-20 shrink-0 pt-3 text-xs text-muted-foreground">{label}</span>
       <div className="flex flex-1 flex-wrap gap-4">{children}</div>
     </div>
   );
@@ -230,7 +230,7 @@ function RouteComponent() {
               key={variant}
               className="flex items-center gap-3"
             >
-              <span className="text-muted-foreground w-20 shrink-0 text-xs">{variant}</span>
+              <span className="w-20 shrink-0 text-xs text-muted-foreground">{variant}</span>
               <Surface
                 variant={variant}
                 className="border-border flex-1 rounded-xl border p-5"
