@@ -1,10 +1,4 @@
 :root {
-  /* Field container background — one step elevated above the current surface; overridden per surface */
-  --field: var(--surface-default);
-  --field-foreground: var(--surface-default-foreground);
-  --field-hover: var(--surface-default-hover);
-  --field-border: var(--surface-default-border);
-
   /* Spacing Multiplier */
   --spacing: 0.25rem;
 
@@ -96,4 +90,10 @@
   --secondary-inv: color-mix(in oklab, var(--secondary) 15%, transparent);
   --secondary-inv-foreground: var(--secondary);
   --secondary-inv-hover: color-mix(in oklab, var(--secondary) 20%, transparent);
+
+  /* Field container background — one step elevated above the current surface; overridden per surface */
+  --field: var(--surface-default);
+  --field-foreground: var(--surface-default-foreground);
+  --field-hover: var(--surface-default-hover);
+  --field-border: var(--surface-default-border);
 }
