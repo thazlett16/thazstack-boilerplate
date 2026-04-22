@@ -11,7 +11,7 @@ import { NumberFieldStepButtons } from './components/number-field-step-buttons';
 
 export const NumberField = Object.assign(NumberFieldRoot, {
   Root: NumberFieldRoot,
-  FieldLabelInputContainer: LabelInputContainer,
+  LabelInputContainer,
   Label,
   Group: NumberFieldGroup,
   Input,
@@ -23,5 +23,5 @@ export const NumberField = Object.assign(NumberFieldRoot, {
 });
 
 export type { NumberFieldProps } from './components/number-field';
-export type { NumberFieldVariants } from './variants';
+export type { NumberFieldVariants, SlotsNumberFieldVariants, RequiredNumberFieldVariants } from './variants';
 export { numberFieldVariants } from './variants';

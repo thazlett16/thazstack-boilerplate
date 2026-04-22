@@ -10,22 +10,27 @@
   --color-surface-default: var(--surface-default);
   --color-surface-default-foreground: var(--surface-default-foreground);
   --color-surface-default-hover: var(--surface-default-hover);
+  --color-surface-default-border: var(--surface-default-border);
 
   --color-surface-secondary: var(--surface-secondary);
   --color-surface-secondary-foreground: var(--surface-secondary-foreground);
   --color-surface-secondary-hover: var(--surface-secondary-hover);
+  --color-surface-secondary-border: var(--surface-secondary-border);
 
   --color-surface-tertiary: var(--surface-tertiary);
   --color-surface-tertiary-foreground: var(--surface-tertiary-foreground);
   --color-surface-tertiary-hover: var(--surface-tertiary-hover);
+  --color-surface-tertiary-border: var(--surface-tertiary-border);
 
   --color-surface-quaternary: var(--surface-quaternary);
   --color-surface-quaternary-foreground: var(--surface-quaternary-foreground);
   --color-surface-quaternary-hover: var(--surface-quaternary-hover);
+  --color-surface-quaternary-border: var(--surface-quaternary-border);
 
   --color-surface-quinary: var(--surface-quinary);
   --color-surface-quinary-foreground: var(--surface-quinary-foreground);
   --color-surface-quinary-hover: var(--surface-quinary-hover);
+  --color-surface-quinary-border: var(--surface-quinary-border);
 
   --color-success: var(--success);
   --color-success-foreground: var(--success-foreground);
@@ -65,4 +70,5 @@
   --color-field: var(--field);
   --color-field-foreground: var(--field-foreground);
   --color-field-hover: var(--field-hover);
+  --color-field-border: var(--field-border);
 }

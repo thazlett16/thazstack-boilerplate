@@ -1,18 +1,39 @@
+import type { ReactNode } from 'react';
+
 import type { NumberFieldProps as RACNumberFieldProps } from 'react-aria-components';
 import { composeRenderProps, NumberField as RACNumberField } from 'react-aria-components';
 
+import { useNumberFieldContext } from '../context';
 import type { NumberFieldVariants } from '../variants';
-import { numberFieldVariants } from '../variants';
+import { NumberFieldContextProvider } from './number-field-context-provider';
 
-export type NumberFieldProps = RACNumberFieldProps & NumberFieldVariants;
+export interface NumberFieldProps extends RACNumberFieldProps, NumberFieldVariants {
+  children: ReactNode;
+}
 
 export function NumberField(props: NumberFieldProps) {
+  return (
+    <NumberFieldContextProvider {...props}>
+      <NumberFieldInner {...props} />
+    </NumberFieldContextProvider>
+  );
+}
+
+function NumberFieldInner(props: NumberFieldProps) {
+  const context = useNumberFieldContext();
+
+  if (context === undefined) {
+    throw new Error('NumberField must be used within a component that extends a NumberFieldContextProvider');
+  }
+
+  const { slots } = context;
+
   return (
     <RACNumberField
       data-slot="number-field"
       {...props}
       className={composeRenderProps(props.className, (className, renderProps) => {
-        return numberFieldVariants({ ...props, ...renderProps, className });
+        return slots.root({ ...props, ...renderProps, className });
       })}
     />
   );

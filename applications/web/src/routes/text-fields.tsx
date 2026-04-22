@@ -37,18 +37,18 @@ function RouteComponent() {
         <SectionLabel>Default</SectionLabel>
         <div className="flex flex-wrap gap-6">
           <TextField className="w-64">
-            <TextField.FieldLabelInputContainer>
+            <TextField.LabelInputContainer>
               <TextField.Label>Full name</TextField.Label>
               <TextField.Input placeholder="Jane Smith" />
-            </TextField.FieldLabelInputContainer>
+            </TextField.LabelInputContainer>
             <TextField.Description>Used on your public profile.</TextField.Description>
           </TextField>
 
           <TextField className="w-64">
-            <TextField.FieldLabelInputContainer>
+            <TextField.LabelInputContainer>
               <TextField.Label>Bio</TextField.Label>
               <TextField.TextArea placeholder="Tell us about yourself…" />
-            </TextField.FieldLabelInputContainer>
+            </TextField.LabelInputContainer>
             <TextField.Description>Shown below your display name.</TextField.Description>
           </TextField>
         </div>
@@ -60,10 +60,10 @@ function RouteComponent() {
         <div className="flex flex-col gap-5">
           <FieldRow label="default">
             <TextField className="w-64">
-              <TextField.FieldLabelInputContainer>
+              <TextField.LabelInputContainer>
                 <TextField.Label>Email</TextField.Label>
                 <TextField.Input placeholder="you@example.com" />
-              </TextField.FieldLabelInputContainer>
+              </TextField.LabelInputContainer>
               <TextField.Description>{"We'll never share your email."}</TextField.Description>
             </TextField>
           </FieldRow>
@@ -73,10 +73,10 @@ function RouteComponent() {
               isInvalid
               className="w-64"
             >
-              <TextField.FieldLabelInputContainer>
+              <TextField.LabelInputContainer>
                 <TextField.Label>Email</TextField.Label>
                 <TextField.Input placeholder="you@example.com" />
-              </TextField.FieldLabelInputContainer>
+              </TextField.LabelInputContainer>
               <TextField.Description>{"We'll never share your email."}</TextField.Description>
               <TextField.FieldError>Please enter a valid email address.</TextField.FieldError>
             </TextField>
@@ -87,13 +87,13 @@ function RouteComponent() {
               isDisabled
               className="w-64"
             >
-              <TextField.FieldLabelInputContainer>
+              <TextField.LabelInputContainer>
                 <TextField.Label>Email</TextField.Label>
                 <TextField.Input
                   placeholder="you@example.com"
                   value="jane@example.com"
                 />
-              </TextField.FieldLabelInputContainer>
+              </TextField.LabelInputContainer>
               <TextField.Description>{"We'll never share your email."}</TextField.Description>
             </TextField>
           </FieldRow>
@@ -103,10 +103,10 @@ function RouteComponent() {
               isReadOnly
               className="w-64"
             >
-              <TextField.FieldLabelInputContainer>
+              <TextField.LabelInputContainer>
                 <TextField.Label>Email</TextField.Label>
                 <TextField.Input value="jane@example.com" />
-              </TextField.FieldLabelInputContainer>
+              </TextField.LabelInputContainer>
               <TextField.Description>Contact support to change this.</TextField.Description>
             </TextField>
           </FieldRow>
@@ -116,10 +116,10 @@ function RouteComponent() {
               isRequired
               className="w-64"
             >
-              <TextField.FieldLabelInputContainer>
+              <TextField.LabelInputContainer>
                 <TextField.Label>Email</TextField.Label>
                 <TextField.Input placeholder="you@example.com" />
-              </TextField.FieldLabelInputContainer>
+              </TextField.LabelInputContainer>
               <TextField.Description>Required to create your account.</TextField.Description>
             </TextField>
           </FieldRow>
@@ -132,10 +132,10 @@ function RouteComponent() {
         <div className="flex flex-col gap-5">
           <FieldRow label="default">
             <TextField className="w-64">
-              <TextField.FieldLabelInputContainer>
+              <TextField.LabelInputContainer>
                 <TextField.Label>Notes</TextField.Label>
                 <TextField.TextArea placeholder="Add any additional notes…" />
-              </TextField.FieldLabelInputContainer>
+              </TextField.LabelInputContainer>
               <TextField.Description>Optional — visible only to you.</TextField.Description>
             </TextField>
           </FieldRow>
@@ -145,10 +145,10 @@ function RouteComponent() {
               isInvalid
               className="w-64"
             >
-              <TextField.FieldLabelInputContainer>
+              <TextField.LabelInputContainer>
                 <TextField.Label>Notes</TextField.Label>
                 <TextField.TextArea placeholder="Add any additional notes…" />
-              </TextField.FieldLabelInputContainer>
+              </TextField.LabelInputContainer>
               <TextField.Description>Optional — visible only to you.</TextField.Description>
               <TextField.FieldError>Notes cannot exceed 500 characters.</TextField.FieldError>
             </TextField>
@@ -159,10 +159,10 @@ function RouteComponent() {
               isDisabled
               className="w-64"
             >
-              <TextField.FieldLabelInputContainer>
+              <TextField.LabelInputContainer>
                 <TextField.Label>Notes</TextField.Label>
                 <TextField.TextArea defaultValue="Editing is currently locked." />
-              </TextField.FieldLabelInputContainer>
+              </TextField.LabelInputContainer>
             </TextField>
           </FieldRow>
 
@@ -171,10 +171,10 @@ function RouteComponent() {
               isReadOnly
               className="w-64"
             >
-              <TextField.FieldLabelInputContainer>
+              <TextField.LabelInputContainer>
                 <TextField.Label>Notes</TextField.Label>
                 <TextField.TextArea value="This record has been archived." />
-              </TextField.FieldLabelInputContainer>
+              </TextField.LabelInputContainer>
               <TextField.Description>Contact support to edit archived records.</TextField.Description>
             </TextField>
           </FieldRow>
@@ -195,23 +195,23 @@ function RouteComponent() {
             </Card.Header>
             <Card.Content className="flex flex-col gap-5">
               <TextField>
-                <TextField.FieldLabelInputContainer>
+                <TextField.LabelInputContainer>
                   <TextField.Label>Display name</TextField.Label>
                   <TextField.Input placeholder="Jane Smith" />
-                </TextField.FieldLabelInputContainer>
+                </TextField.LabelInputContainer>
               </TextField>
               <TextField>
-                <TextField.FieldLabelInputContainer>
+                <TextField.LabelInputContainer>
                   <TextField.Label>Username</TextField.Label>
                   <TextField.Input placeholder="janesmith" />
-                </TextField.FieldLabelInputContainer>
+                </TextField.LabelInputContainer>
                 <TextField.Description>Your @handle visible to others.</TextField.Description>
               </TextField>
               <TextField>
-                <TextField.FieldLabelInputContainer>
+                <TextField.LabelInputContainer>
                   <TextField.Label>Bio</TextField.Label>
                   <TextField.TextArea placeholder="Tell us about yourself…" />
-                </TextField.FieldLabelInputContainer>
+                </TextField.LabelInputContainer>
                 <TextField.Description>Max 160 characters.</TextField.Description>
               </TextField>
             </Card.Content>
@@ -227,25 +227,25 @@ function RouteComponent() {
             </Card.Header>
             <Card.Content className="flex flex-col gap-5">
               <TextField isRequired={true}>
-                <TextField.FieldLabelInputContainer>
+                <TextField.LabelInputContainer>
                   <TextField.Label>Email</TextField.Label>
                   <TextField.Input
                     type="email"
                     placeholder="you@example.com"
                   />
-                </TextField.FieldLabelInputContainer>
+                </TextField.LabelInputContainer>
               </TextField>
               <TextField
                 isRequired={true}
                 isInvalid={true}
               >
-                <TextField.FieldLabelInputContainer>
+                <TextField.LabelInputContainer>
                   <TextField.Label>Password</TextField.Label>
                   <TextField.Input
                     type="password"
                     placeholder="••••••••"
                   />
-                </TextField.FieldLabelInputContainer>
+                </TextField.LabelInputContainer>
                 <TextField.FieldError>Incorrect password. Please try again.</TextField.FieldError>
               </TextField>
             </Card.Content>
@@ -268,10 +268,10 @@ function RouteComponent() {
                 className="border-border flex-1 rounded-xl border p-5"
               >
                 <TextField className="max-w-xs">
-                  <TextField.FieldLabelInputContainer>
+                  <TextField.LabelInputContainer>
                     <TextField.Label>Search</TextField.Label>
                     <TextField.Input placeholder="Type to search…" />
-                  </TextField.FieldLabelInputContainer>
+                  </TextField.LabelInputContainer>
                 </TextField>
               </Surface>
             </div>
@@ -283,17 +283,17 @@ function RouteComponent() {
       <section>
         <SectionLabel>Full width</SectionLabel>
         <div className="flex flex-col gap-5">
-          <TextField fullWidth={true}>
-            <TextField.FieldLabelInputContainer>
+          <TextField>
+            <TextField.LabelInputContainer>
               <TextField.Label>Subject</TextField.Label>
               <TextField.Input placeholder="What's this about?" />
-            </TextField.FieldLabelInputContainer>
+            </TextField.LabelInputContainer>
           </TextField>
-          <TextField fullWidth={true}>
-            <TextField.FieldLabelInputContainer>
+          <TextField>
+            <TextField.LabelInputContainer>
               <TextField.Label>Message</TextField.Label>
               <TextField.TextArea placeholder="Write your message…" />
-            </TextField.FieldLabelInputContainer>
+            </TextField.LabelInputContainer>
             <TextField.Description>{"We'll respond within 2 business days."}</TextField.Description>
           </TextField>
         </div>

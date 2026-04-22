@@ -3,6 +3,7 @@
   --field: var(--surface-default);
   --field-foreground: var(--surface-default-foreground);
   --field-hover: var(--surface-default-hover);
+  --field-border: var(--surface-default-border);
 
   /* Spacing Multiplier */
   --spacing: 0.25rem;
@@ -34,22 +35,27 @@
   --surface-default: oklch(0.17 0.012 224);
   --surface-default-foreground: oklch(0.93 0.005 220);
   --surface-default-hover: oklch(0.2 0.012 224);
+  --surface-default-border: oklch(0.2 0.012 224);
 
   --surface-secondary: oklch(0.19 0.0125 224);
   --surface-secondary-foreground: oklch(0.915 0.005 220);
   --surface-secondary-hover: oklch(0.22 0.0125 224);
+  --surface-secondary-border: oklch(0.22 0.0125 224);
 
   --surface-tertiary: oklch(0.21 0.013 224);
   --surface-tertiary-foreground: oklch(0.9 0.005 220);
   --surface-tertiary-hover: oklch(0.24 0.013 224);
+  --surface-tertiary-border: oklch(0.24 0.013 224);
 
   --surface-quaternary: oklch(0.235 0.014 222);
   --surface-quaternary-foreground: oklch(0.885 0.005 220);
   --surface-quaternary-hover: oklch(0.265 0.014 222);
+  --surface-quaternary-border: oklch(0.265 0.014 222);
 
   --surface-quinary: oklch(0.26 0.015 220);
   --surface-quinary-foreground: oklch(0.87 0.005 220);
   --surface-quinary-hover: oklch(0.29 0.015 220);
+  --surface-quinary-border: oklch(0.29 0.015 220);
 
   /* Semantic: success */
   --success: oklch(0.62 0.16 148);

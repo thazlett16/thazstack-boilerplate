@@ -8,8 +8,6 @@ export const fieldErrorVariants = tv({
     'text-xs text-danger',
 
     'hidden',
-    'group-data-[invalid="true"]/text-field:block',
-    'group-data-[invalid="true"]/number-field:block',
   ],
 });
 

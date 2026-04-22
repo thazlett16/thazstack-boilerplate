@@ -12,7 +12,6 @@ export const textAreaVariants = tv({
     'placeholder:text-muted-foreground/50',
     'placeholder:opacity-0',
     'placeholder:transition-opacity placeholder:duration-150',
-    'group-focus-within/field-label-input-container:placeholder:opacity-100',
     'data-[disabled]:cursor-not-allowed',
     'data-[disabled]:text-muted-foreground',
     'data-[readonly]:cursor-default',

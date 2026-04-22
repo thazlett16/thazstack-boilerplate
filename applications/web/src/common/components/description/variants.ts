@@ -6,9 +6,6 @@ export const descriptionVariants = tv({
     'group/description',
 
     'text-muted-foreground text-xs',
-
-    'group-data-[invalid="true"]/text-field:hidden',
-    'group-data-[invalid="true"]/number-field:hidden',
   ],
 });
 

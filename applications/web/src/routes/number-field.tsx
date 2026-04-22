@@ -38,7 +38,7 @@ function SampleField(
       className="w-48"
       {...rest}
     >
-      <NumberField.FieldLabelInputContainer>
+      <NumberField.LabelInputContainer>
         <NumberField.Label>{label}</NumberField.Label>
         <NumberField.Group>
           <NumberField.Input placeholder="0" />
@@ -47,7 +47,7 @@ function SampleField(
             <NumberField.DecrementButton />
           </NumberField.StepButtons>
         </NumberField.Group>
-      </NumberField.FieldLabelInputContainer>
+      </NumberField.LabelInputContainer>
       {description && <NumberField.Description>{description}</NumberField.Description>}
       {error && <NumberField.FieldError>{error}</NumberField.FieldError>}
     </NumberField>
@@ -66,7 +66,7 @@ function RouteComponent() {
         <SectionLabel>Default</SectionLabel>
         <div className="flex flex-wrap gap-6">
           <NumberField className="w-48">
-            <NumberField.FieldLabelInputContainer>
+            <NumberField.LabelInputContainer>
               <NumberField.Label>Quantity</NumberField.Label>
               <NumberField.Group>
                 <NumberField.Input placeholder="0" />
@@ -75,7 +75,7 @@ function RouteComponent() {
                   <NumberField.DecrementButton />
                 </NumberField.StepButtons>
               </NumberField.Group>
-            </NumberField.FieldLabelInputContainer>
+            </NumberField.LabelInputContainer>
             <NumberField.Description>Number of items to order.</NumberField.Description>
           </NumberField>
 
@@ -83,7 +83,7 @@ function RouteComponent() {
             className="w-48"
             formatOptions={{ style: 'currency', currency: 'USD' }}
           >
-            <NumberField.FieldLabelInputContainer>
+            <NumberField.LabelInputContainer>
               <NumberField.Label>Price</NumberField.Label>
               <NumberField.Group>
                 <NumberField.Input placeholder="0.00" />
@@ -92,7 +92,7 @@ function RouteComponent() {
                   <NumberField.DecrementButton />
                 </NumberField.StepButtons>
               </NumberField.Group>
-            </NumberField.FieldLabelInputContainer>
+            </NumberField.LabelInputContainer>
             <NumberField.Description>Formatted as USD currency.</NumberField.Description>
           </NumberField>
         </div>
@@ -162,7 +162,7 @@ function RouteComponent() {
               maxValue={100}
               defaultValue={50}
             >
-              <NumberField.FieldLabelInputContainer>
+              <NumberField.LabelInputContainer>
                 <NumberField.Label>Percentage</NumberField.Label>
                 <NumberField.Group>
                   <NumberField.Input placeholder="0" />
@@ -171,7 +171,7 @@ function RouteComponent() {
                     <NumberField.DecrementButton />
                   </NumberField.StepButtons>
                 </NumberField.Group>
-              </NumberField.FieldLabelInputContainer>
+              </NumberField.LabelInputContainer>
               <NumberField.Description>Clamped between 0 and 100.</NumberField.Description>
             </NumberField>
           </FieldRow>
@@ -192,7 +192,7 @@ function RouteComponent() {
             </Card.Header>
             <Card.Content className="flex flex-col gap-5">
               <NumberField minValue={1}>
-                <NumberField.FieldLabelInputContainer>
+                <NumberField.LabelInputContainer>
                   <NumberField.Label>Quantity</NumberField.Label>
                   <NumberField.Group>
                     <NumberField.Input placeholder="1" />
@@ -201,10 +201,10 @@ function RouteComponent() {
                       <NumberField.DecrementButton />
                     </NumberField.StepButtons>
                   </NumberField.Group>
-                </NumberField.FieldLabelInputContainer>
+                </NumberField.LabelInputContainer>
               </NumberField>
               <NumberField formatOptions={{ style: 'currency', currency: 'USD' }}>
-                <NumberField.FieldLabelInputContainer>
+                <NumberField.LabelInputContainer>
                   <NumberField.Label>Discount</NumberField.Label>
                   <NumberField.Group>
                     <NumberField.Input placeholder="0.00" />
@@ -213,7 +213,7 @@ function RouteComponent() {
                       <NumberField.DecrementButton />
                     </NumberField.StepButtons>
                   </NumberField.Group>
-                </NumberField.FieldLabelInputContainer>
+                </NumberField.LabelInputContainer>
                 <NumberField.Description>Applied to the subtotal.</NumberField.Description>
               </NumberField>
             </Card.Content>
@@ -246,12 +246,11 @@ function RouteComponent() {
       <section>
         <SectionLabel>Full width</SectionLabel>
         <NumberField
-          fullWidth
           minValue={10}
           maxValue={100}
           isInvalid={true}
         >
-          <NumberField.FieldLabelInputContainer>
+          <NumberField.LabelInputContainer>
             <NumberField.Label>Target value</NumberField.Label>
             <NumberField.Group>
               <NumberField.Input placeholder="0" />
@@ -260,7 +259,7 @@ function RouteComponent() {
                 <NumberField.DecrementButton />
               </NumberField.StepButtons>
             </NumberField.Group>
-          </NumberField.FieldLabelInputContainer>
+          </NumberField.LabelInputContainer>
           <NumberField.Description>Sets the upper bound for the calculation.</NumberField.Description>
           <NumberField.FieldError>Error</NumberField.FieldError>
         </NumberField>

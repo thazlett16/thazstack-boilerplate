@@ -5,17 +5,12 @@ export const labelInputContainerVariants = tv({
   base: [
     'group/label-input-container',
     'relative flex items-stretch',
-    'bg-[var(--field)]',
     'rounded-md',
-    'border border-surface-tertiary',
+    'bg-field',
     'transition-colors duration-150',
-    'hover:border-primary-hover',
-    'focus-within:border-primary',
-    'group-data-[invalid="true"]/text-field:border-danger',
-    'group-data-[invalid="true"]/text-field:hover:border-danger-hover',
-    'group-data-[invalid="true"]/text-field:focus-within:border-danger',
-    'group-data-[disabled="true"]/text-field:opacity-50',
-    'group-data-[disabled="true"]/text-field:cursor-not-allowed',
+
+    'border border-field-border',
+    'focus-within:border-primary hover:border-primary-hover',
   ],
 });
 
