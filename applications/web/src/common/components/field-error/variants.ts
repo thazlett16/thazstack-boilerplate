@@ -9,6 +9,7 @@ export const fieldErrorVariants = tv({
 
     'hidden',
     'group-data-[invalid="true"]/text-field:block',
+    'group-data-[invalid="true"]/number-field:block',
   ],
 });
 

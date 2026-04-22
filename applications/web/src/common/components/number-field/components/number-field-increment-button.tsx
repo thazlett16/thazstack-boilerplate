@@ -1,0 +1,17 @@
+import { ChevronUp } from 'lucide-react';
+import type { ButtonProps } from 'react-aria-components';
+import { Button } from 'react-aria-components';
+
+export type NumberFieldIncrementButtonProps = Omit<ButtonProps, 'slot' | 'children'>;
+
+export function NumberFieldIncrementButton(props: NumberFieldIncrementButtonProps) {
+  return (
+    <Button
+      slot="increment"
+      {...props}
+      className="text-muted-foreground flex w-8 flex-1 cursor-default items-center justify-center transition-colors outline-none data-disabled:opacity-50 data-focus-visible:ring-1 data-focus-visible:ring-primary data-focus-visible:ring-inset data-hovered:bg-[var(--field-hover)] data-hovered:text-foreground data-pressed:brightness-95"
+    >
+      <ChevronUp className="size-3" />
+    </Button>
+  );
+}

@@ -48,6 +48,7 @@ const NAV_LINKS = [
   { to: '/colors', label: 'Colors' },
   { to: '/buttons', label: 'Buttons' },
   { to: '/text-fields', label: 'Text Fields' },
+  { to: '/number-field', label: 'Number Field' },
   { to: '/cards', label: 'Cards' },
   { to: '/surfaces', label: 'Surfaces' },
   { to: '/about', label: 'About' },

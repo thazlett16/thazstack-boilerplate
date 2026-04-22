@@ -2,7 +2,7 @@ import { tv } from 'tailwind-variants';
 
 export const textAreaVariants = tv({
   base: [
-    'w-full',
+    'min-w-0 flex-1',
     'px-3 pt-5 pb-1.5',
     'leading-normal',
     'bg-transparent',

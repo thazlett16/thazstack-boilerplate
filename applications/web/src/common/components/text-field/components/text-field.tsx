@@ -1,18 +1,39 @@
+import type { ReactNode } from 'react';
+
 import type { TextFieldProps as RACTextFieldProps } from 'react-aria-components';
 import { composeRenderProps, TextField as RACTextField } from 'react-aria-components';
 
+import { useTextFieldContext } from '../context';
 import type { TextFieldVariants } from '../variants';
-import { textFieldVariants } from '../variants';
+import { TextFieldContextProvider } from './text-field-context-provider';
 
-export type TextFieldProps = RACTextFieldProps & TextFieldVariants;
+export interface TextFieldProps extends RACTextFieldProps, TextFieldVariants {
+  children: ReactNode;
+}
 
 export function TextField(props: TextFieldProps) {
   return (
+    <TextFieldContextProvider {...props}>
+      <TextFieldInner {...props} />
+    </TextFieldContextProvider>
+  );
+}
+
+function TextFieldInner(props: TextFieldProps) {
+  const context = useTextFieldContext();
+
+  if (context === undefined) {
+    throw new Error('TextField must be used within a component that extends a TextFieldContextProvider');
+  }
+
+  const { slots } = context;
+
+  return (
     <RACTextField
-      data-slot="text-field"
       {...props}
+      data-slot="text-field"
       className={composeRenderProps(props.className, (className, renderProps) => {
-        return textFieldVariants({ ...props, ...renderProps, className });
+        return slots.root({ ...props, ...renderProps, className });
       })}
     />
   );

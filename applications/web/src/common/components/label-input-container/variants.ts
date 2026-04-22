@@ -1,10 +1,10 @@
 import type { VariantProps } from 'tailwind-variants';
 import { tv } from 'tailwind-variants';
 
-export const fieldLabelInputContainerVariants = tv({
+export const labelInputContainerVariants = tv({
   base: [
-    'group/field-label-input-container',
-    'relative',
+    'group/label-input-container',
+    'relative flex items-stretch',
     'bg-[var(--field)]',
     'rounded-md',
     'border border-surface-tertiary',
@@ -19,6 +19,6 @@ export const fieldLabelInputContainerVariants = tv({
   ],
 });
 
-export type FieldLabelInputContainerVariants = VariantProps<typeof fieldLabelInputContainerVariants>;
-// export type SlotsFieldLabelInputContainerMessageVariants = ReturnType<typeof fieldLabelInputContainerVariants>;
-// export type RequiredFieldLabelInputContainerMessageVariants = Required<SetNonNullable<FieldLabelInputContainerMessageVariants>>;
+export type LabelInputContainerVariants = VariantProps<typeof labelInputContainerVariants>;
+// export type SlotsLabelInputContainerMessageVariants = ReturnType<typeof LabelInputContainerVariants>;
+// export type RequiredLabelInputContainerMessageVariants = Required<SetNonNullable<LabelInputContainerMessageVariants>>;
