@@ -460,14 +460,18 @@ const vitestConfig = oxlintDefineConfig({
   ...baseConfig,
   overrides: [
     {
-      files: ['**/.test.ts', '**/.test-d.ts'],
+      files: ['**/*.test.ts', '**/*.test-d.ts', '**/*.test.tsx', '**/*.test-d.tsx'],
       plugins: ['vitest'],
       rules: {
         // Correctness Rules
         // Suspicious Rules
+        'unicorn/consistent-function-scoping': 'off',
+
         // Perf Rules
         // Restriction Rules
         // Pedantic Rules
+        'typescript/no-unsafe-argument': 'off',
+        'typescript/no-unsafe-assignment': 'off',
         'vitest/no-conditional-in-test': 'error',
 
         // Style Rules

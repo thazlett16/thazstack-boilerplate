@@ -79,6 +79,7 @@ export const buttonVariants = tv({
     fullWidth: {
       true: 'w-full',
     },
+    // Create other variants for outlined, text, contained buttons?
     isInverted: { true: '' },
   },
   compoundVariants: [
